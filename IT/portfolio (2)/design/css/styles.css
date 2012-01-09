@@ -1,0 +1,141 @@
+* {
+	margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-align: center;
+}
+a img { 
+	border: none;
+}
+
+html, body {
+	height: 100%;
+}
+body {
+	background-image:url('backgr.jpg');
+}
+.articles_formatter {
+	clear: both; 
+	text-align: center;
+}
+.articles_formatter2{
+	clear: both; 
+	text-align: left;
+}
+#wrapper {
+	position: absolute;
+	top: 2%;
+  	bottom: 50%;
+  	right: 50%;
+  	width: 600px;
+	margin:auto;
+	min-height: 100%;
+	height: auto;
+	height: 100%;
+	margin: 0 auto -4em;
+}
+#container {
+/*
+	-moz-border-radius: 10px; 
+	-webkit-border-radius: 10px; 
+	border-radius: 10px ; 
+*/
+	background-color:white;
+  	position: relative;
+  	left: 50%;
+  	top: 5%;
+	padding:30px;
+}
+.header {
+        text-align:center;
+   
+}
+.footer, .push {
+	text-align:right;
+	left: 50%;
+	left: 50%;
+	height: 4em;
+}
+
+#ruler{
+	border:1px solid;
+}
+
+#footer_img {
+	float:left;
+}
+
+.navi1 {
+  width: 525px;
+  position: relative;
+  display: block;
+  margin:0 auto;
+  height: 72px;
+}
+.navi1 ul {
+  float: none;
+  list-style-image: none;
+  list-style-type: none;
+  margin: 3px 0;
+}
+.navi1 ul li {
+  height: 72px;
+  background-image: url(tab-1.png);
+  background-repeat: no-repeat;
+  float: left;
+  margin: 0px;
+  position: absolute;
+  padding-top: 5px;
+}
+.navi1 ul li a{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.navi1 ul li.sm1 {
+  background-position: 0px 0px;
+  width: 125px;
+  left: 0px;
+}
+.navi1 ul li.sm2 {
+  background-position: -125px 0px;
+  width: 124px;
+  left: 100px;
+}
+.navi1 ul li.sm3 {
+  background-position: -249px 0px;
+  width: 124px;
+  left: 200px;
+}
+.navi1 ul li.sm4 {
+  background-position: -373px 0px;
+  width: 125px;
+  left: 300px;
+}
+.navi1 ul li.sm5 {
+  background-position: -498px 0px;
+  width: 126px;
+  left: 400px;
+}
+.navi1 ul li:hover{
+  z-index: 1000;
+}
+.navi1 ul li.sm1:hover {
+  background-position: 0px -75px; 
+}
+.navi1 ul li.sm2:hover {
+  background-position: -125px -75px; 
+}
+.navi1 ul li.sm3:hover {
+  background-position: -249px -75px; 
+}
+.navi1 ul li.sm4:hover {
+  background-position: -373px -75px; 
+}
+.navi1 ul li.sm5:hover {
+  background-position: -498px -75px; 
+}
+
+
+

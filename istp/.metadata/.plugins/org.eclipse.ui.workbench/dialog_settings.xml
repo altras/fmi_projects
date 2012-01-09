@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="NewWizardAction">
+		<item value="com.ibm.xtools.modeler.ui.actions.NewModelActionWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.gmf.runtime.emf.ui.modeling"/>
+		</list>
+	</section>
+	<section name="InstallationDialogSettings">
+		<item value="-268" key="DIALOG_Y_ORIGIN"/>
+		<item value="1|Sans|10.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+		<item value="-115" key="DIALOG_X_ORIGIN"/>
+		<item value="836" key="DIALOG_HEIGHT"/>
+		<item value="802" key="DIALOG_WIDTH"/>
+	</section>
+	<section name="WorkbenchPreferenceDialogSettings">
+		<item value="0" key="DIALOG_Y_ORIGIN"/>
+		<item value="642" key="DIALOG_X_ORIGIN"/>
+	</section>
+	<section name="ShowViewDialog">
+		<item value="org.eclipse.gef.ui.palette_view" key="ShowViewDialog.STORE_SELECTED_VIEW_ID"/>
+		<item value="220" key="DIALOG_Y_ORIGIN"/>
+		<item value="776" key="DIALOG_X_ORIGIN"/>
+		<item value="1|Sans|10.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+		<item value="447" key="DIALOG_HEIGHT"/>
+		<item value="371" key="DIALOG_WIDTH"/>
+		<list key="ShowViewDialog.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.ui"/>
+			<item value="com.ibm.xtools.comparemerge.delta.annotation.ui"/>
+			<item value="com.ibm.xtools.mde"/>
+			<item value="com.ibm.xtools.modeling"/>
+		</list>
+	</section>
+</section>

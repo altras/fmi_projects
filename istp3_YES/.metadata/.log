@@ -1,0 +1,12 @@
+!SESSION 2011-01-31 19:31:05.305 -----------------------------------------------
+eclipse.buildId=unknown
+java.fullversion=JRE 1.6.0 IBM J9 2.4 Linux x86-32 jvmxi3260sr8-20100401_55940 (JIT enabled, AOT enabled)
+J9VM - 20100401_055940
+JIT  - r9_20100401_15339
+GC   - 20100308_AA
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product com.ibm.rational.rsa.product.v80.ide
+Command-line arguments:  -os linux -ws gtk -arch x86 -product com.ibm.rational.rsa.product.v80.ide
+
+!ENTRY org.eclipse.ui 4 4 2011-01-31 19:31:46.667
+!MESSAGE Unable to find Action Set: com.ibm.xtools.pluglets.ui.actionSet

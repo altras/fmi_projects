@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="true" key="com.ibm.xtools.rmp.ui.properties.PropertyDialogDIALOG_USE_PERSISTED_SIZE"/>
+	<item value="308" key="com.ibm.xtools.rmp.ui.properties.PropertyDialogDIALOG_HEIGHT"/>
+	<item value="false" key="com.ibm.xtools.rmp.ui.properties.PropertyDialogDIALOG_USE_PERSISTED_LOCATION"/>
+	<item value="518" key="com.ibm.xtools.rmp.ui.properties.PropertyDialogDIALOG_WIDTH"/>
+</section>

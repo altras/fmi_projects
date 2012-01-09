@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.uml.msl.model" version="7.0.0"><feature description="" name="com.ibm.xtools.ruml.feature" url="" version="7.0.0"/></signature>?>
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.mmi.ui.signatures.diagram" version="7.0.0"><feature description="" name="Rational Modeling Platform (com.ibm.xtools.rmp)" url="" version="7.0.0"/></signature>?>
+<uml:Package xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmlns:umlnotation="http://www.ibm.com/xtools/1.5.3/Umlnotation" xmi:id="_H0vsQC1eEeCM_thFIWpvmQ" name="Blank Package">
+  <eAnnotations xmi:id="_H0vsQS1eEeCM_thFIWpvmQ" source="uml2.diagrams" references="_H0vsQi1eEeCM_thFIWpvmQ">
+    <contents xmi:type="umlnotation:UMLDiagram" xmi:id="_H0vsQi1eEeCM_thFIWpvmQ" type="Freeform" name="Main"/>
+  </eAnnotations>
+  <eAnnotations xmi:id="_H0vsQy1eEeCM_thFIWpvmQ" source="com.ibm.xtools.common.ui.reduction.editingCapabilities">
+    <details xmi:id="_H0vsRC1eEeCM_thFIWpvmQ" key="com.ibm.xtools.activities.umlBBFreeFormDiagram" value="1"/>
+    <details xmi:id="_H0vsRS1eEeCM_thFIWpvmQ" key="com.ibm.xtools.activities.umlBBActivityDiagram" value="1"/>
+    <details xmi:id="_H0vsRi1eEeCM_thFIWpvmQ" key="com.ibm.xtools.activities.umlBBComponentDiagram" value="1"/>
+    <details xmi:id="_H0vsRy1eEeCM_thFIWpvmQ" key="com.ibm.xtools.activities.umlBBStateChartDiagram" value="1"/>
+    <details xmi:id="_H0vsSC1eEeCM_thFIWpvmQ" key="com.ibm.xtools.activities.umlBBClassDiagram" value="1"/>
+    <details xmi:id="_H0vsSS1eEeCM_thFIWpvmQ" key="com.ibm.xtools.activities.umlBBTimingDiagram" value="1"/>
+    <details xmi:id="_H0vsSi1eEeCM_thFIWpvmQ" key="com.ibm.xtools.activities.umlBBUseCaseDiagram" value="1"/>
+    <details xmi:id="_H0vsSy1eEeCM_thFIWpvmQ" key="com.ibm.xtools.activities.umlBBCommunicationDiagram" value="1"/>
+    <details xmi:id="_H0vsTC1eEeCM_thFIWpvmQ" key="com.ibm.xtools.activities.umlBBDeploymentDiagram" value="1"/>
+    <details xmi:id="_H0vsTS1eEeCM_thFIWpvmQ" key="com.ibm.xtools.activities.umlBBStructureDiagram" value="1"/>
+    <details xmi:id="_H0vsTi1eEeCM_thFIWpvmQ" key="com.ibm.xtools.activities.umlBBSequenceDiagram" value="1"/>
+    <details xmi:id="_H0vsTy1eEeCM_thFIWpvmQ" key="com.ibm.xtools.activities.umlBBObjectDiagram" value="1"/>
+    <details xmi:id="_H0vsUC1eEeCM_thFIWpvmQ" key="com.ibm.xtools.activities.umlBBInteractionOverviewDiagram" value="1"/>
+  </eAnnotations>
+  <packageImport xmi:id="_H0vsUS1eEeCM_thFIWpvmQ">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <profileApplication xmi:id="_H0vsUi1eEeCM_thFIWpvmQ">
+    <eAnnotations xmi:id="_H0vsUy1eEeCM_thFIWpvmQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://UML_PROFILES/Standard.profile.uml#_yzU58YinEdqtvbnfB2L_5w"/>
+    </eAnnotations>
+    <appliedProfile href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+  </profileApplication>
+  <profileApplication xmi:id="_H0vsVC1eEeCM_thFIWpvmQ">
+    <eAnnotations xmi:id="_H0vsVS1eEeCM_thFIWpvmQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://UML2_MSL_PROFILES/Default.epx#_fNwoAAqoEd6-N_NOT9vsCA?Default/Default?"/>
+    </eAnnotations>
+    <appliedProfile href="pathmap://UML2_MSL_PROFILES/Default.epx#_a_S3wNWLEdiy4IqP8whjFA?Default?"/>
+  </profileApplication>
+  <profileApplication xmi:id="_H0vsVi1eEeCM_thFIWpvmQ">
+    <eAnnotations xmi:id="_H0vsVy1eEeCM_thFIWpvmQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://UML2_MSL_PROFILES/Deployment.epx#_IrdAUMmBEdqBcN1R6EvWUw?Deployment/Deployment?"/>
+    </eAnnotations>
+    <appliedProfile href="pathmap://UML2_MSL_PROFILES/Deployment.epx#_vjbuwOvHEdiDX5bji0iVSA?Deployment?"/>
+  </profileApplication>
+</uml:Package>

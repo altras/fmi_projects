@@ -1,0 +1,239 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[      8475,        229]
+NotebookOptionsPosition[      8104,        212]
+NotebookOutlinePosition[      8447,        227]
+CellTagsIndexPosition[      8404,        224]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"integralMovie", " ", "[", " ", 
+    RowBox[{"func_", ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"x_", ",", "a_", ",", "b_"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"ymin_", ",", "ymax_"}], "}"}], ",", "sumRule_"}], "]"}], ":=", 
+   "\[IndentingNewLine]", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "apprx", ",", "f", ",", "stepfn", ",", "nrects", ",", "dx", ",", 
+       "plot"}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"f", "[", "t_", "]"}], "=", 
+       RowBox[{"func", " ", "/.", 
+        RowBox[{"x", "\[Rule]", "t"}]}]}], ";", 
+      RowBox[{
+       RowBox[{"stepfn", "[", 
+        RowBox[{"t_", ",", "n_"}], "]"}], "=", 
+       RowBox[{"f", "[", 
+        RowBox[{"a", "+", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"Ceiling", "[", 
+             RowBox[{"n", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"t", "-", "a"}], ")"}], "/", 
+               RowBox[{"(", 
+                RowBox[{"b", "-", "a"}], ")"}]}]}], "]"}], "-", "sumRule"}], 
+           ")"}], 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"b", "-", "a"}], ")"}], "/", "n"}]}]}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Animate", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"dx", "=", 
+          RowBox[{"N", "[", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"b", "-", "a"}], ")"}], "/", 
+            RowBox[{"(", 
+             RowBox[{"2", "^", "k"}], ")"}]}], "]"}]}], ";", 
+         "\[IndentingNewLine]", 
+         RowBox[{"apprx", "=", 
+          RowBox[{"Sum", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"f", "[", 
+              RowBox[{"a", "+", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{"i", "-", "sumRule"}], ")"}], "dx"}]}], "]"}], 
+             "dx"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"i", ",", "1", ",", 
+              RowBox[{"2", "^", "k"}]}], "}"}]}], "]"}]}], ";", 
+         "\[IndentingNewLine]", 
+         RowBox[{"Show", "[", 
+          RowBox[{"Plot", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"f", "[", "x", "]"}], ",", 
+              RowBox[{"stepfn", "[", 
+               RowBox[{"x", ",", 
+                RowBox[{"2", "^", "k"}]}], "]"}]}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"x", ",", "a", ",", "b"}], "}"}], ",", 
+            RowBox[{"PlotPoints", "\[Rule]", "200"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"PlotStyle", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"{", "Red", "}"}], ",", 
+               RowBox[{"{", "Black", "}"}]}], "}"}]}], ",", 
+            RowBox[{"Filling", "\[Rule]", "Axis"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"PlotRange", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"ymin", ",", "ymax"}], "}"}]}], ",", 
+            RowBox[{"PlotLabel", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"2", "^", "k"}], ",", "apprx"}], "}"}]}]}], "]"}], 
+          "]"}]}], ",", 
+        RowBox[{"{", 
+         RowBox[{"k", ",", "1", ",", "8", ",", "1"}], "}"}]}], "]"}]}]}], 
+    "]"}]}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"integralMovie", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"x", "^", "3"}], " ", "-", " ", 
+    RowBox[{"4", "*", 
+     RowBox[{"x", "^", "2"}]}], " ", "-", " ", "x", " ", "+", "13"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", "4"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", "13"}], "}"}], ",", ".5"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.4800573465351825`*^9, 3.4800576738154078`*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`k$$ = 1, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`k$$], 1, 8, 1}}, Typeset`size$$ = {
+    360., {123., 126.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`k$584$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`k$$ = 1}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`k$$, $CellContext`k$584$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, 
+      "Body" :> ($CellContext`dx$583 = 
+        N[(4 - 0)/2^$CellContext`k$$]; $CellContext`apprx$583 = 
+        Sum[$CellContext`f$583[
+           0 + ($CellContext`i - 
+              0.5) $CellContext`dx$583] $CellContext`dx$583, {$CellContext`i, 
+           1, 2^$CellContext`k$$}]; Show[
+         Plot[{
+           $CellContext`f$583[$CellContext`x], 
+           $CellContext`stepfn$583[$CellContext`x, 
+            2^$CellContext`k$$]}, {$CellContext`x, 0, 4}, PlotPoints -> 200, 
+          PlotStyle -> {{Red}, {Black}}, Filling -> Axis, 
+          PlotRange -> {0, 13}, 
+          PlotLabel -> {2^$CellContext`k$$, $CellContext`apprx$583}]]), 
+      "Specifications" :> {{$CellContext`k$$, 1, 8, 1, 
+         AppearanceElements -> {
+          "ProgressSlider", "PlayPauseButton", "FasterSlowerButtons", 
+           "DirectionButton"}}}, 
+      "Options" :> {
+       ControlType -> Animator, AppearanceElements -> None, 
+        SynchronousUpdating -> True, ShrinkingDelay -> 10.}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{405., {158., 163.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.480057680148241*^9, 3.4800577589602737`*^9}}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+    "zad", ".1", " ", "napishete", " ", "programa", " ", "pokazvashta", " ", 
+     "posledovatelnost", " ", "ot", " ", "grafiki"}], ",", 
+    RowBox[{
+    "koito", " ", "pokazvat", " ", "licata", " ", "na", " ", "ravninnata", 
+     " ", "figura", " ", "pod", " ", "grafikata", " ", "na", " ", "f", " ", 
+     RowBox[{"m", "/", "u"}]}]}], "  ", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"x", "=", 
+     RowBox[{
+      RowBox[{"a", " ", "i", " ", "x"}], "=", 
+      RowBox[{"b", " ", "zaedno", " ", "s", " ", "Rimanovite", " ", 
+       RowBox[{"sumi", ".", "Neka"}], " ", "sushto", " ", "da", " ", 
+       "pokazva", " ", "broq", " ", "na", " ", "podintervalite", " ", "i", 
+       " ", "iz4islenata", " ", "rimanova", " ", "suma", " ", "za", " ", 
+       "vsqka", " ", 
+       RowBox[{"grafika", ".", "Vuv"}], " ", "vsqka", " ", "sledvashta", " ", 
+       "rimanova", " ", "suma", " ", "broqt", " ", "na", " ", 
+       "podintervalite", " ", "se", " ", "udvoqva"}]}]}], " ", ",", " ", 
+    RowBox[{
+    "zapo4vaiki", " ", "s", " ", "2", " ", "i", " ", "svurshvaiki", " ", "s", 
+     " ", "256."}]}]}]}]], "Input",
+ CellChangeTimes->{{3.480057766345999*^9, 3.480057860983945*^9}}]
+},
+WindowSize->{616, 535},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"7.0 for Microsoft Windows (32-bit) (November 10, 2008)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[567, 22, 3859, 107, 232, "Input"],
+Cell[4429, 131, 2389, 50, 338, "Output"]
+}, Open  ]],
+Cell[6833, 184, 1267, 26, 152, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

@@ -1,0 +1,8 @@
+someRandomFunction :: Int -> Int -> Int
+someRandomFunction x = x+5
+
+anotherRandom :: Double -> Int -> Double
+anotherRandom y = someRandomFunction y + 6.15
+
+calculateIt :: Float -> Int -> Int
+calculateIt z = anotherRandom z . someRandomFunction 

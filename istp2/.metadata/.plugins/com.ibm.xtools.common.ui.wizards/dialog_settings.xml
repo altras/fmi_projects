@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="NewModelWizard">
+		<item value="com.ibm.xtools.modeler.ui.wizards.templates.advancedblankmodel" key="NewModelFromTemplatePage.lastTemplate"/>
+		<item value="com.ibm.xtools.modeler.ui.wizards.category.umlGeneralPurpose" key="NewModelFromTemplatePage.lastCategory"/>
+	</section>
+</section>

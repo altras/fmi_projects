@@ -1,0 +1,146 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 6.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[      4495,        137]
+NotebookOptionsPosition[      4205,        123]
+NotebookOutlinePosition[      4544,        138]
+CellTagsIndexPosition[      4501,        135]
+WindowFrame->Normal
+ContainsDynamic->False*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{"iz4islete", " ", "ploshta", " ", "pod", " ", "grafikata", " ", "na",
+   " ", "funkciqta"}], "\[IndentingNewLine]", 
+ RowBox[{"y", "=", " ", 
+  RowBox[{
+   RowBox[{"sinx", " ", "mejdu", " ", "x"}], "=", 
+   RowBox[{
+    RowBox[{"0", " ", "i", " ", "x"}], "=", 
+    "pi"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"1.", " ", "definiraite", " ", 
+  "funkciqta"}], "\[IndentingNewLine]", 
+ RowBox[{"2.", "postroite", " ", "grafikata", " ", "i", " ", 
+  "\"\<zatumnete\>\"", " ", "jelanata", " ", 
+  "plosht"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"3.", " ", "definiraite", " ", "funkciqta", " ", 
+   RowBox[{"areaR", "[", "n_", "]"}], " ", "koqto", " ", "da", " ", 
+   "iz4islqva", " ", "priblijenie", " ", "na", " ", "tursneta", " ", 
+   "plosht"}], " ", ",", " ", 
+  RowBox[{
+  "koooato", " ", "izpolzva", " ", "desnite", " ", "kraishta", " ", "na", " ",
+    "podintervalite"}], " ", ",", " ", 
+  RowBox[{"na", " ", "koito", " ", "e", " ", 
+   RowBox[{"razdelen", "[", 
+    RowBox[{"o", ",", "pi"}], "]"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+  "4.", " ", "obrazuvaite", " ", "tablicata", " ", "sudurjashta", " ", 
+   "priblijeniq", " ", "na", " ", "tursenata", " ", "plosht", " ", "s", " ", 
+   "10"}], ",", "20", ",", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"30", " ", "..."}], ".", " ", "100"}], " ", 
+   "pravougulnika"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"5.", " ", "oprostete", " ", "funkciqta", " ", "areaR"}], ",", " ", 
+  
+  RowBox[{
+  "za", " ", "da", " ", "q", " ", "namerite", " ", "kato", " ", "funkciq", 
+   " ", "na", " ", "n", " ", 
+   RowBox[{"(", " ", "samo", ")"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"6.", " ", "iz4islete", " ", "liceto", " ", 
+    RowBox[{"(", " ", "ploshta", ")"}]}], " ", ",", " ", 
+   RowBox[{
+   "kato", " ", "namerete", " ", "granicata", " ", "na", " ", "areaR"}], ",", 
+   
+   RowBox[{
+    RowBox[{"kogato", " ", "n"}], "\[Rule]", " ", "infinity"}]}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"1.", " ", 
+    RowBox[{"f", "[", "x_", "]"}]}], " ", "=", " ", 
+   RowBox[{"Sin", "[", "x", " ", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"2.", " ", 
+  RowBox[{"Plot", "[", 
+   RowBox[{
+    RowBox[{"f", "[", "x", "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "0", ",", "pi"}], "}"}], ",", 
+    RowBox[{"Filling", "\[Rule]", "Axis"}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"3.", 
+   RowBox[{"areaR", "[", "n_", "]"}]}], "=", 
+  RowBox[{
+   UnderoverscriptBox["\[Sum]", 
+    RowBox[{"i", "=", "1"}], "n"], 
+   RowBox[{
+    RowBox[{"f", "[", 
+     RowBox[{"0", "+", 
+      RowBox[{"i", "*", 
+       RowBox[{"(", 
+        RowBox[{"\[Pi]", "/", "n"}], ")"}]}]}], "]"}], "*", 
+    RowBox[{"\[Pi]", "/", "n"}]}]}]}]}], "Input",
+ CellChangeTimes->{{3.478246658103361*^9, 3.4782469742691655`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"4.", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"areaR", "[", "n", "]"}], "//", "N"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"n", ",", "10", ",", "100", ",", "10"}], "}"}]}], "]"}]}], "//",
+     "TableForm"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"5.", 
+     RowBox[{"areaR", "[", "n", "]"}]}], " ", "//", " ", "Simplify"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"6.", 
+    RowBox[{"Limit", "[", 
+     RowBox[{
+      RowBox[{"areaR", "[", "n", "]"}], ",", 
+      RowBox[{"n", "\[Rule]", "infinity"}]}], "]"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.478246975503517*^9, 3.4782470326586695`*^9}}]
+},
+WindowSize->{616, 535},
+WindowMargins->{{0, Automatic}, {Automatic, 29}},
+FrontEndVersion->"6.0 for Microsoft Windows (32-bit) (May 21, 2008)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[568, 21, 2881, 77, 353, "Input"],
+Cell[3452, 100, 749, 21, 112, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)

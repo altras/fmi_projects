@@ -1,0 +1,6 @@
+#Mon Jan 31 18:24:10 EET 2011
+__DEFAULT__=false
+org.eclipse.sdk.Eclipse.master=true
+org.eclipse.help.ui.localSearch.master=true
+com.ibm.developerWorks.master=true
+expression=system boundary box

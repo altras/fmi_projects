@@ -1,0 +1,6 @@
+#Thu Jan 27 21:19:52 EET 2011
+__DEFAULT__=false
+org.eclipse.sdk.Eclipse.master=true
+org.eclipse.help.ui.localSearch.master=true
+com.ibm.developerWorks.master=true
+expression=setup configuration management

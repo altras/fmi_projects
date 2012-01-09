@@ -1,0 +1,22 @@
+/* TEAM */
+	Developer 1: Atanas Manolov
+	Contact: nasko159 [at] gmail [dot] com
+	From: Sofia, Plovdiv, Bulgaria
+	Faculty Number: 71268
+
+	Developer 2: Vitaliy Filipov
+	Contact: altras [at] gmail [dot] com
+	From: Sofia, Pleven, Bulgaria
+	Faculty Number: 71256
+
+	Developer 3: Simona Traikova
+	Contact: 
+	From: Sofia, Bulgaria
+	Faculty Number: 71207
+
+/* SITE */
+	Language:English
+
+
+/* http://humanstxt.org */
+

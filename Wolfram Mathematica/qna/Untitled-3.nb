@@ -1,0 +1,128 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[      3018,        118]
+NotebookOptionsPosition[      2432,         93]
+NotebookOutlinePosition[      2777,        108]
+CellTagsIndexPosition[      2734,        105]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"\[Integral]", 
+  RowBox[{"x", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"Ln", "[", "x", "]"}], ")"}], "^", "2"}], ")"}], 
+   RowBox[{"\[DifferentialD]", "x"}]}]}]], "Input",
+ CellChangeTimes->{{3.477036459305451*^9, 3.4770365373021326`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"\[Integral]", 
+  RowBox[{
+   RowBox[{"x", " ", 
+    SuperscriptBox[
+     RowBox[{"Ln", "[", "x", "]"}], "2"]}], 
+   RowBox[{"\[DifferentialD]", "x"}]}]}]], "Output",
+ CellChangeTimes->{3.4770365395541277`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{"\[Integral]", 
+   RowBox[{"x", " ", 
+    SuperscriptBox[
+     RowBox[{"Ln", "[", "x", "]"}], "2"], 
+    RowBox[{"\[DifferentialD]", "x"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.4770365631612473`*^9, 3.477036563953329*^9}}],
+
+Cell[BoxData[
+ RowBox[{"\[Integral]", 
+  RowBox[{
+   RowBox[{"x", " ", 
+    SuperscriptBox[
+     RowBox[{"Ln", "[", "x", "]"}], "2"]}], 
+   RowBox[{"\[DifferentialD]", "x"}]}]}]], "Output",
+ CellChangeTimes->{3.4770365654753666`*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"\[Integral]", 
+  RowBox[{"x", " ", 
+   SuperscriptBox[
+    RowBox[{"ln", "[", "x", "]"}], "2"], 
+   RowBox[{"\[DifferentialD]", "x"}]}]}]], "Input",
+ CellChangeTimes->{3.4770365817984476`*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[Integral]", 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{"x", " ", 
+     SuperscriptBox[
+      RowBox[{"ln", "[", "x", "]"}], "2"]}], ")"}], 
+   RowBox[{"\[DifferentialD]", "x"}]}]}]], "Input",
+ CellChangeTimes->{{3.477038093573326*^9, 3.4770381009462967`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"\[Integral]", 
+  RowBox[{
+   RowBox[{"x", " ", 
+    SuperscriptBox[
+     RowBox[{"ln", "[", "x", "]"}], "2"]}], 
+   RowBox[{"\[DifferentialD]", "x"}]}]}]], "Output",
+ CellChangeTimes->{3.477038101711711*^9}]
+}, Open  ]]
+},
+WindowSize->{616, 535},
+WindowMargins->{{36, Automatic}, {Automatic, 46}},
+FrontEndVersion->"7.0 for Microsoft Windows (32-bit) (November 10, 2008)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[567, 22, 287, 8, 43, "Input"],
+Cell[857, 32, 233, 7, 43, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1127, 44, 280, 7, 64, "Input"],
+Cell[1410, 53, 233, 7, 43, "Output"]
+}, Open  ]],
+Cell[1658, 63, 216, 6, 43, "Input"],
+Cell[CellGroupData[{
+Cell[1899, 73, 283, 8, 43, InheritFromParent],
+Cell[2185, 83, 231, 7, 43, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

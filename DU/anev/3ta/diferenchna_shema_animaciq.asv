@@ -1,0 +1,29 @@
+h = 0.1;
+tau = 0.05;
+x = 0:h:2;
+t = 0:tau:1;
+N = length(x);
+M = length(t);
+u = zeros([N,M]);
+for m = 1:M
+   u(0,m) = u(1,m);
+   u(N,m)=0;
+end
+for n = 1:N
+   u(n,0) = x*sin(pi*x(n)*x(n));
+   u(n,1) = u(n,0) + tau*x*x*(x-2)*(x-2);
+end
+for m = 1:(M - 1)
+   for n = 2:(N - 1)
+       u(n,m+1) = 2*u(n,m) - u(n,m-1) + tau^2/h^2*(u(n+1,m)-2*u(n,m)+u(n-1,m));
+   end
+end
+for m = 1:M
+   plot(x,u(:,m))
+   axis([0,3,-1,5])
+   M(m)= getframe;
+end
+movie(M,3)
+
+  
+
