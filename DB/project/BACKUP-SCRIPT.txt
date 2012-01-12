@@ -1,0 +1,198 @@
+﻿SET SCHEMA PUBLISHINGHOUSE;
+
+SELECT * FROM CONTRACT;
+SELECT * FROM PARTNER;
+SELECT * FROM EMPLOYEE;
+SELECT * FROM PRINTINGHOUSE;
+SELECT * FROM BILL;
+
+UPDATE CONTRACT SET DESCRIPTION = 'Превод на фентъзи' WHERE NUMBER = 1006;
+
+INSERT INTO CONTRACT (
+TYPE,DESCRIPTION,START_DATE,END_DATE ) 
+VALUES 
+('Граждански','Издаване на стихотворение','08-18-2011','09-18-2011'),
+('Граждански','Издаване на стихотворение','06-03-2011','07-11-2011'),
+('Граждански','Издаване на роман','02-03-2012','04-07-2013'),
+('Граждански','Издаване на разказ','09-02-2011','12-18-2011'),
+('Граждански','Издаване на фентъзи','12-03-2011','07-14-2013'),
+('Граждански','Превод на фентъзи','12-03-2011','07-14-2013'),
+('Трудов','Редактор','02-05-2011',null),
+('Трудов','Заместник редактор','02-05-2011',null),
+('Трудов','Касиер','02-06-2011',null),
+('Трудов','Охрана','02-06-2011',null),
+('Трудов','Дизайнер','02-06-2011',null),
+('Трудов','Хигиенист','02-07-2011',null),
+('Трудов','Счетоводител','02-06-2011',null),
+('За услуга','Дистрибутор','03-08-2011','05-08-2012'),
+('За услуга','Наем на помещение','02-05-2011','07-14-2012'),
+('За услуга','Наем на транспорт','03-05-2011','07-14-2012'),
+('За услуга','Доставка на оборудване','02-05-2011','05-14-2012'),
+('За услуга','Печат','02-18-2011','07-14-2012'),
+('За услуга','Продажба на книги','02-05-2011',null),
+('За услуга','Печат','02-22-2011','02-22-2012'),
+('За услуга','Печат','02-19-2011','05-11-2012'),
+('За услуга','Печат','02-20-2011','06-23-2012');
+
+
+UPDATE PRINTINGHOUSE SET CONTRACT_NUMBER=1020 WHERE NAME='Евро-принт ООД';
+
+UPDATE PRINTINGHOUSE SET CONTRACT_NUMBER=1021 WHERE NAME='БулПринт ЕООД';
+
+UPDATE PRINTINGHOUSE SET CONTRACT_NUMBER=1022 WHERE NAME='Принт Комерс ООД';
+
+UPDATE PRINTINGHOUSE SET CONTRACT_NUMBER=1018 WHERE NAME='КЛМН ООД';
+
+INSERT INTO EMPLOYEE (
+EGN,NAME,TELEPHONE,CONTRACT_NUMBER,SALARY,IBAN
+) VALUES 
+('9006214027','Михайл Савов','0885034699',1007,2000.0,'BG80 BNBG 9661 3490 3456 66'),
+('8803042318','Петър Динев','0885032599',1008,1060,'BG80 BNBG 1283 1020 3456 12'),
+('9012231893','Бойко Владимиров','0889014629',1009,1090,'BG80 BNBG 9348 4586 3456 90'),
+('8412231814','Владимир Филипов','0885034399',1010,790,'BG80 BNBG 9661 9012 3456 66'),
+('8704057765','Станислав Чубев','0885666699',1011,690,'BG80 BNBG 0092 9923 0000 34'),
+('8912031836','Игор Генчев','0885123456',1013,1000,'BG80 BNBG 1100 1020 3456 11'),
+('8801061823','Траяна Константинова','0885990013',1012,400,'BG80 BNBG 9661 1020 3456 11');
+
+INSERT INTO PARTNER (
+NAME,TYPE,ADDRESS,CONTRACT_NUMBER
+) VALUES
+('Петър Петров','Физическо лице','ул. Филипови 16',1001),
+('Фатме Мусладжа','Физическо лице','ул. Троянов 55',1002),
+('Димитър Димитров','Физическо лице','ул. Стамболийски 78',1003),
+('Атанас Спирков','Физическо лице','ул. Десети декември 150',1004),
+('Минко Трифонов','Физическо лице','ул. Драган Цанков 135',1005),
+('Трифон Трифонов','Физическо лице','ул. Витоша 5',1006),
+('Калоян Стойчев','Юридическо лице','ул. Пиротска',1007),
+('Ийст ООД','Юридическо лице','ул. Баучер 666',1014),
+('Ексес ЕАД','Юридическо лице','ул. Абу даби 90',1015),
+('Мелън АД','Юридическо лице','бул. Видинградски 234',1016),
+('Хамали ЕООД','Юридическо лице','бул. Орлов 255',1017),
+('Тюлените ООД','Юридическо лице','бул. Македония 900',1019);
+
+INSERT INTO PRINTINGHOUSE (
+NAME,ADDRESS
+) VALUES ('КЛМН ООД','бул. Македония 16');
+
+ALTER TABLE PRINTINGHOUSE ADD CONTRACT_NUMBER INT;
+
+
+
+ALTER TABLE PRINTINGHOUSE ADD CONSTRAINT CONTRACT_FK FOREIGN KEY (CONTRACT_NUMBER) REFERENCES CONTRACT(NUMBER); 
+
+DELETE FROM PARTNER;
+
+--'Приходно банково бордеро','Разходно банково бордеро',
+--'Приходен касов ордер','Разходен касов ордер'
+
+INSERT INTO BILL (
+BILL_TYPE,BILL_NUMBER,DATE,MONEY,DESCRIPTION,CONTRACT_NUMBER
+) VALUES
+('Разходно банково бордеро',1,'2011-04-03',10000,'За външни услуги',1022),
+('Разходен касов ордер',1,'2011-02-08',500,'За външни услуги',1017),
+('Разходно банково бордеро',2,'2011-04-05',300,'За външни услуги',1016),
+('Разходен касов ордер',2,'2011-02-05',750,'За външни услуги',1015),
+('Приходно банково бордеро',3,'2011-04-05',19000,'За външни услуги',1019);
+
+INSERT INTO ASSET(
+DOCUMENT_TYPE,DOCUMENT_NUMBER,ORIGIN,YEAR,INIT_VALUE,AMOUNT,ANNUAL_DEPRECIATION,DESCRIPTION
+) VALUES 
+('Разходен касов ордер',1,'Закупено',2011,120,7,15,'Работни столове'),
+('Разходен касов ордер',1,'Закупено',2011,340,7,15,'Работни маси'),
+('Разходен касов ордер',1,'Закупено',2011,100,1,18,'Принтер-факс lexmark'),
+('Разходен касов ордер',1,'Закупено',2011,2300,7,23,'Компютър IBM'),
+(null,null,'Делова вноска',2011,30300,1,10,'Служебен автомобил-Opel');
+
+
+
+DROP TABLE ASSETS;
+
+CREATE TABLE ASSET (
+DOCUMENT_TYPE VARCHAR(40),
+DOCUMENT_NUMBER INT,
+ORIGIN VARCHAR(20) NOT NULL,
+YEAR INT NOT NULL,
+INIT_VALUE DECIMAL NOT NULL,
+AMOUNT INT NOT NULL,
+ANNUAL_DEPRECIATION DECIMAL NOT NULL,
+DESCRIPTION VARCHAR(2000) NOT NULL,
+CONSTRAINT BILL_FK FOREIGN KEY (DOCUMENT_TYPE,DOCUMENT_NUMBER) REFERENCES BILL(BILL_TYPE,BILL_NUMBER),
+CONSTRAINT ASSET_PK 
+PRIMARY KEY (YEAR,DESCRIPTION),
+CONSTRAINT YEAR_CHK CHECK (YEAR>2000),
+CONSTRAINT POSITIVE_NUMBER CHECK (DOCUMENT_NUMBER > 0),
+CONSTRAINT PERCENT CHECK (ANNUAL_DEPRECIATION BETWEEN 0 AND 100)
+);
+
+DROP TABLE CONTRACT;
+
+CREATE TABLE CONTRACT (
+TYPE VARCHAR(50) NOT NULL,
+NUMBER INT NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1000, INCREMENT BY 1),
+DESCRIPTION VARCHAR(2000) NOT NULL,
+START_DATE DATE NOT NULL DEFAULT CURRENT_DATE,
+END_DATE DATE DEFAULT NULL,
+CONSTRAINT CONTRACT_PK 
+PRIMARY KEY (NUMBER)
+--CONSTRAINT END_DATE_CHECK 
+--CHECK (END_DATE > CURRENT_DATE)
+);
+
+CREATE TABLE EMPLOYEE (
+EGN CHAR(10) NOT NULL,
+NAME VARCHAR(50) NOT NULL,
+SALARY DECIMAL,
+TELEPHONE VARCHAR(15) NOT NULL,
+CONTRACT_NUMBER INT NOT NULL,
+IBAN VARCHAR(35) NOT NULL,
+CONSTRAINT CONTRACT_FK FOREIGN KEY (CONTRACT_NUMBER) REFERENCES CONTRACT(NUMBER),
+CONSTRAINT EMPLOYEE_PK 
+PRIMARY KEY (EGN)
+);
+
+CREATE TABLE PARTNER (
+NAME VARCHAR(50) NOT NULL,
+TYPE VARCHAR(50) NOT NULL,
+ADDRESS VARCHAR(100) NOT NULL,
+CONTRACT_NUMBER INT NOT NULL,
+CONSTRAINT PARTNER_PK
+PRIMARY KEY(NAME),
+CONSTRAINT CONTRACT_FK FOREIGN KEY(CONTRACT_NUMBER) REFERENCES CONTRACT(NUMBER) 
+);
+
+INSERT INTO PARTNERSHIP (
+NAME,TYPE,DESCRIPTION,CONTRACT_NUMBER) VALUES ('AIJDAS','ASD','ASDDASD',1002);
+
+DELETE FROM PARTNERSHIP WHERE CONTRACT_NUMBER=1002;
+
+ALTER TABLE BILL DROP DIRECTION;
+
+ALTER TABLE BILL ADD CONSTRAINT CHECK_TYPE CHECK (BILL_TYPE IN (
+'Bank income statement','Bank expenditure statement',
+'Revenue cash disbursement','Expenditure cash disbursement'));
+
+DROP TABLE PARTNERSHIP;
+
+ALTER TABLE BILL DROP CONSTRAINT CHECK_TYPE;
+
+ALTER TABLE EMPLOYEE DROP POSITION;
+
+DROP TABLE EMPLOYEE;
+
+DROP TABLE ORDERS;
+
+DELETE FROM CONTRACT WHERE NUMBER>1022;
+
+ALTER TABLE EMPLOYEE ADD CONSTRAINT CONTRACT_FK FOREIGN KEY (CONTRACT_NUMBER) REFERENCES CONTRACT(NUMBER); 
+
+ALTER TABLE BILL ADD CONSTRAINT CONTRACT_FK FOREIGN KEY (CONTRACT_NUMBER) REFERENCES CONTRACT(NUMBER); 
+
+ALTER TABLE BILL ADD CONSTRAINT CHECK_TYPE CHECK (BILL_TYPE IN (
+'Приходно банково бордеро','Разходно банково бордеро',
+'Приходен касов ордер','Разходен касов ордер'));
+
+
+ALTER TABLE PARTNER ADD CONSTRAINT CHECK_TYPE CHECK (TYPE IN (
+'Юридическо лице','Физическо лице'));
+
+

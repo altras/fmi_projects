@@ -1,0 +1,29 @@
+age=c(18, 23, 25, 35, 65, 54, 34, 56, 72, 19, 23, 42, 18, 39, 37)
+maxrate=c(202,186,187,180,156,169,174,172,153,199,193,174,198,183,178)
+
+plot(age,maxrate)
+abline(lm(maxrate ~ age))
+library("UsingR")
+l1=lm(maxrate~age)
+l2=simple.lm(age,maxrate)
+summary(l2)
+
+par(mfrow=c(2,2))
+plot(l2)
+
+
+res = resid(l2) # the residuals lm.result
+b1 =(coef(l2))[['age']] # the x part of the coefficients
+s = sqrt( sum( res^2 ) / 13 )
+SE1 = s/sqrt(sum((age-mean(age))^2))
+t = (b1 + 1)/SE1 # of course - (-1) = +1
+pt(t,13,lower.tail=FALSE) # find the right tail for this value of t
+
+#standartna greshka
+# s = ocenkata na dispersiqta
+SE0 = s * sqrt(sum(age^2)/(15*sum(age-mean(x))^2))
+b0=210.04846
+t=(b0 - 220)/SE0
+pt(t,13,lower.tail=T)
+par(mfrow=c(1,1))
+simple.lm(age,maxrate,show.ci=TRUE,conf.level=90) 

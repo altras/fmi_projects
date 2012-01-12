@@ -1,0 +1,114 @@
+#liniqta na regresiq ni sluji za:po stoinost na x mojem da prognozirame budeshta
+#stoinost na y
+#napravena e :po metoda na nai malkite kvadrati
+#kakvo e ustoi4iva regresiq?
+library(UsingR)
+data(florida)
+attach(florida)
+names(florida)
+rank(florida)
+l1=simple.lm(BUSH,BUCHANAN)
+l2=simple.lm(BUSH[-50],BUCHANAN[-50])#bez 50-tiq element
+#ustoi4iva regresiq e po 4ast ot dannite
+#tam kudeto e skup4vaneto , deto e nai-4ernoto 
+#rlm,lqs - funkcii za ustoi4iva regresiq-izrqzvame nqkakva 4ast ot dannite
+#i tezi koito ostavat pravim model po tqh
+#sledovatelno sled kato izrqzvame nqkakva 4ast to ostava sushtata
+library(MASS)
+attach(florida)
+plot(BUSH,BUCHANAN)
+#abline risuva novi linii v/u ve4e napravena grafika
+abline(lm(BUCHANAN~BUSH),lty=1)
+#lty=1 e tipa na liniqta, dali e s punktir ili plutna liniq
+#rlm = random linear model ? :D
+abline(rlm(BUCHANAN~BUSH),lty=2)
+#kak se pravi legenda po grafikata 
+legend(locator(1),legend=c("lm","rlm"),lty=1:2)
+plot(BUSH,BUCHANAN)
+abline(rlm(BUCHANAN~BUSH),lty=1)
+abline(rlm(BUCHANAN[-50]~BUSH[-50]),lty=4)#razlikata e malko, demek tova e usttoi4iva regresiq ^^
+
+#dotuka risuvahme pravi linii, no mojem i linii ot po-visoka stepen. demek x^2
+#lines,points,abline risuva vurhu ve4e napravena grafika
+x=seq(0,4,by=.1)
+plot(x,x^2,type="l")
+#sushtoto neshto moje da se napravi i s curve - koqto risuva kriva liniq
+curve(x^2,0,4) #zadavame intervala s poslednite dve cifri
+#za da risuvame v/u ve4e napravena grafika curve mu slagame parametur add=T
+
+#sega tuka pravim nqkolko neshta po edin i susht na4in da risuvame to4ki v/u ve4e napravena
+#grafika
+m=(0:8)*4
+t=c(394,329,291,255,229,204,179,163,150)
+plot(m,t)
+#analogi4no 
+abline(lm(t~m))
+summary(lm(t~m))#dava ni koef na regresiq nqkude v sebe si. tam kudeto e intercept-a : 360 i -7
+abline(360,-7.28)#risuvame sushtoto kato abline
+points(m,360-7.28*m,type="l")#
+lines(m,360-7.28*m)
+curve(360 - 7.28*x,add=T)
+
+#MNOGOMERNI DANNI
+#danni s mnogo promenlivi
+
+#dannite v R se pazqt  v dataframes, da go priemame kato tablica
+#kolonite v data frames sa obektite, a redovete sa opredeleni experimenti za daden obekt.
+
+#pitali sme 4ma 4oveka za teglo,viso4ina i pol
+weight=c(150,135,210,140)#pounds
+height=c(65,61,70,65)#inches
+gender=c("f","f","m","f")
+bmi = data.frame(w=weight,h=height,g=gender) #body-mass index
+bmi
+names(bmi)
+#za da zadadem imena na horata 
+row.names(bmi)=c("iva","yana","vitan","ana")
+bmi
+#kak se stiga do danna
+attach(bmi) #prika4ame bmi
+#dostigame do danni kato masiv [row,column]
+bmi[ ,"h"]
+bmi[4,1]
+bmi["ana","w"]
+bmi[2,1:2]
+bmi["vitan", ]
+#dostigane kato spisuk - 4rez dvoini kvadratni skobi i vutre citirame imeto na obekta koito
+#tursim, t.e. imeto na kolonata.
+#ili s [[..]] ili s $
+bmi$h
+bmi[["h"]]
+bmi[[1]]
+
+#eto tuka purvo obhojdame kato spisuk, posle kato masiv
+bmi[bmi$g =="f", ] #izvejda vsi4ki stoinosti za jenite
+bmi[bmi[["g"]]=="f", ]
+
+#KAKVO SA MODELNI FORMULI
+#Model formula
+#modelna formula: y~x
+data(PlantGrowth)
+attach(PlantGrowth)
+names(PlantGrowth)
+
+#shte risuvame kutiq s mustaci :$D
+boxplot(weight~group)
+
+attach(bmi)
+boxplot(w~g)#za jenite imame minimum,maksimum i mediana !
+#y~x modelirame y po x. y se nari4a otklik, a x prediktor
+#y~x1+x2 t.e. modelirame y po dve razli4ni x prediktora. oba4e x1 i x2 ne se subirat
+#y~x1*x2 t.e. modeliram y~x1+x2+x1*x2
+#y~x1+I(x2^2) t.e. y~x1 i y~x2^2
+#I() preobrazuva izraza v matemati4eskata formula
+#y~x1|x2 t.e. y po x2 pri uslovie x2
+
+
+
+
+
+
+
+
+
+ 

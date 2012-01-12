@@ -1,0 +1,32 @@
+19 fevruari 1 zala
+C++0x memory model
+cstdatomic header containst standart atomic types 
+synch_with ni garantira 4e na 2 nishki (1 -> 2) -> (3 -> 4) operacii...
+
+std::shared_ptr<my_data> p;
+void process_global_data() {
+std:shared_ptr<my_data> local = std::atomic_load(&p);
+bla bla...
+}
+
+consumer & producer pattern
+std::vector<int> data;
+std::atomic_bool data_ready(false);
+void writer_thread(){
+
+data.push_back(42);
+data_ready = true;
+}
+void reader_thread() {
+while(!data_ready.load()) {
+std::this_thread::sleep(std::millisconds(1));
+}
+std::cout << "the answer="<<data[0]<<endl;
+
+release sequencee - posledovatelnost koqto zapo4va s memory order relase bla /
+
+FENCE o_o
+
+izpolzvaiki atomarni operacii bihme mogli da vuvedem red v ne-atomarnite operacii xD
+
+biblioteki za neshto si : MCSTL (samo s g++), TBB 3.0, (za visual studio 2010) Parallel Pattern Library
