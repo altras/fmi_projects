@@ -1,0 +1,34 @@
+					Designing Multithreaded Programs in C++0x
+
+std::unique_future moje da se spodelq
+
+vseki edin task suzdava future
+
+kato izpadame v undefined behavior si pravim RAII to the rescue \m/
+
+std::thread suzdava nishka
+std::thread t(do stuff);
+thread_guard wtf?
+edin variant e da polzvame queue i da imame mutex s neq.
+mutex ???
+lock_guard e lock_scpoe edin vid-zaklu4vash go v scope-a za da ne se izpolzva ot mnogo nishki ednovremmeno s ideqta da e exception safety.
+losho e da yield-vame zashtoto OS-a puska nashata nishka i izhabqva resursno vreme. Za da go predodvratim izpolzvame condition_Variable(zaklu4vame si mutex-a i 4akame 
+za da napravim nujnite neshta). Oba4e za da go izpolzvame postoqnno izpolzvame notify_one. 
+Contention - ako nishkite vmesto da rabotqt, nie nali gi puskame paralelno, oba4e mutex-a e tolkova vajen za tqh 4e te ne rabotqt napulno paralelno i ako imame mnogo
+mutexi tova ni pre4i na dvete nishki da sa v edin i susht blok (za da sa parelelni). 
+
+deadlock - dvete nishki sa blokirani
+livelock - ne sa blokirani, te vurtqt no ne mogat da produljat napred
+
+"ako hodqt na rabota e po-dobre otkolkoto da stoqt na kafe i da obsujdat" !!!
+data proximity - ideq si nqmam kakvo e  xD
+
+false sharing se slu4va na obiknovenni kompove. 
+oversubscription : edna nishka zaklu4va obekt, pravi neshto tejko s nego oba4e nikoq druga nishka ne moje da go polzva.
+
+
+examples:
+
+
+
+

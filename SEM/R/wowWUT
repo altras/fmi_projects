@@ -1,0 +1,80 @@
+library("MASS")
+data(UScereal)
+attach(UScereal)
+names(UScereal)
+# 1) mfr & shelf, ??? ????? ?????????
+boxplot(mfr,shelf)
+stripchart(shelf)
+simple.violinplot(shelf)
+par(mfrow=c(1,1))
+plot(mfr,shelf)
+x= mfr
+y=shelf
+lm.res=simple.lm(x,y)
+coef(lm.res)
+simple.lm(x,y,show.residuals=TRUE)
+coef(lm.res)[1]
+# 2) fat & vitamins, ????? ?????????
+boxplot(fat,vitamins)
+stripchart(fat)
+simple.violinplot(fat)
+par(mfrow=c(1,1))
+plot(fat,vitamins)
+z=fat
+s=vitamins
+lm.res=simple.lm(s,z)
+coef(lm.res)
+simple.lm(s,z,show.residuals=TRUE)
+coef(lm.res)[1]
+
+# 3) fat & shelf ????? ?????????
+boxplot(fat,shelf)
+stripchart(shelf)
+simple.violinplot(shelf)
+par(mfrow=c(1,1))
+plot(fat,shelf)
+x=fat
+y=shelf
+lm.res=simple.lm(x,y)
+coef(lm.res)
+simple.lm(x,y,show.residuals=TRUE)
+coef(lm.res)[1]
+
+# 4) carbo & sugars, ????? ?????????
+boxplot(carbo,sugars)
+stripchart(sugars)
+simple.violinplot(sugars)
+par(mfrow=c(1,1))
+plot(carbo,sugars)
+x=carbo
+y=sugars
+lm.res=simple.lm(x,y)
+coef(lm.res)
+simple.lm(x,y,show.residuals=TRUE)
+coef(lm.res)[1]
+
+# 5) fibre & mfr, ????? ?????????
+boxplot(fibre,mfr)
+stripchart(fibre)
+simple.violinplot(fibre)
+par(mfrow=c(1,1))
+plot(fibre,mfr)
+x=fibre
+y=mfr
+lm.res=simple.lm(y,x)
+coef(lm.res)
+simple.lm(y,x,show.residuals=TRUE)
+coef(lm.res)[1]
+
+# 6) sodium & sugars
+boxplot(sodium,sugars)
+stripchart(sugars)
+simple.violinplot(sugars)
+par(mfrow=c(1,1))
+plot(sodium,sugars)
+x=sodium
+y=sugars
+lm.res=simple.lm(x,y)
+coef(lm.res)
+simple.lm(x,y,show.residuals=TRUE)
+coef(lm.res)[1]
