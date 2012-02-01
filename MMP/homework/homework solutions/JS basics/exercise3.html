@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<script type="text/javascript">
+			window.onbeforeunload = function () 
+			{
+				var email = document.getElementById("emailAddress");
+				function(email){
+					
+				}
+				var message = 'Goodbye';
+				return message + " " + email.value;
+			}
+		</script>
+	</head>
+<body>
+
+<h1>Exercise 1</h1>
+<h3> 
+Modify the previous HTML page to have a text field for email address and on clicking the button check if the email is valid (it should follow the format <something>@<host>.<domain>).
+</h3>
+<form>
+	email:<input type="text" id="emailAddress"/>
+	<input type="submit"/>
+</form>
+</body>
+</html> 

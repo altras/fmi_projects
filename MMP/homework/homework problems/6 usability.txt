@@ -1,0 +1,15 @@
+------------------- exercise 1 ---------------
+Create a paper prototype for a mobile interface for a thermostat:
+------------------- exercise 2 ---------------
+Create a paper prototype of a Shopping list mobile application with the following capabilities:
+Show product list
+Add product, measure and quantity
+Mark a product as bought
+About window
+------------------- exercise 3 ---------------
+Prototype these gestures for a mobile music application:
+Add notes to a musical staff
+Insert more notes between two adjacent notes
+(make space first)
+Delete single or several notes
+Play the finished melody

@@ -1,0 +1,10 @@
+------------------- exercise 1 ---------------
+Implement a class Human, having name, gender, address, telephone number
+It should have a methods for introducing himself (ex. "Hi I am …!", "I am … years old!")
+------------------- exercise 2 ---------------
+Implement classes Student and Parent inheriting the Human class
+A Student should have
+State holding where s/he studies, a list of his/her marks
+A method to count the average of their marks
+A method for adding/removing a mark
+A Parent should hold a list of all his children(Student objects) and a method to yell at a concrete of  his children

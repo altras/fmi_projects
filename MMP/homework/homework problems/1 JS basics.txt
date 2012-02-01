@@ -1,0 +1,18 @@
+------------------- exercise 1 ---------------
+Create an HTML page that has two text fields    (first name and last name) and a button. When the user clicks the button, a message should show the text in the text fields followed by the current time.
+------------------- exercise 2 --------------- 
+Create a Web page that asks the user about his name and says goodbye to him when leaving the page.
+------------------- exercise 3 --------------- 
+Modify the previous HTML page to have a text field for email address and on clicking the button check if the email is valid (it should follow the format <something>@<host>.<domain>).
+------------------- exercise 4 ---------------
+Create a Web page that shows 20 <div> elements with random location, size and color.
+------------------- exercise 5 ---------------
+Create a drop-down menu
+Use table for the main menu blocks
+Use hidden <DIV> elements (display: none; position:absolute; top:30px)
+Use JavaScript and onmouseover and onmouseout event to change display: none/block
+------------------- exercise 6 ---------------
+Create a DTHML page that has <div> containing a text that scrolls from right to left automatically
+Use setInterval() function to move the text at an interval of 500 ms
+Use overflow:hidden for the <div>
+Use scrollLeft and scrollWidth properties of the <div> element

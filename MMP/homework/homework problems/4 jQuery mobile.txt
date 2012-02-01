@@ -1,0 +1,11 @@
+------------------- exercise 1 ---------------
+Create multiple pages with different content
+Using HTML5 and jQuery Mobile
+Link the pages from the above exercise
+Create a form with validation
+Try to copy one of the famous mobile apps
+For example "Phone book" for Android 
+Expend the previous with adding more options
+Screens for adding and editing new contacts
+Screen for view of a contact
+Etc.

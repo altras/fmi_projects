@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<script type="text/javascript">
+			window.onbeforeunload = function () 
+			{
+				var firstName = document.getElementById("firstName");
+				var lastName = document.getElementById("lastName");
+				var message = 'Goodbye';
+				return message + " " + firstName.value + " " + lastName.value;
+			}
+		</script>
+	</head>
+<body>
+
+<h1>Exercise 1</h1>
+<h3> Create a Web page that asks the user about his name and says goodbye to him when leaving the page.
+</h3>
+<form autocomplete="on">
+	First Name:<input type="text" id="firstName"/>
+	Last Name: <input type="text" id="lastName"/>
+	<input type="submit"/>
+</form>
+</body>
+</html> 
