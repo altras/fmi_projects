@@ -1,0 +1,151 @@
+; Tue Feb 05 14:48:58 EET 2013
+; 
+;+ (version "3.4.8")
+;+ (build "Build 629")
+
+
+(defclass %3ACLIPS_TOP_LEVEL_SLOT_CLASS "Fake class to save top-level slot information"
+	(is-a USER)
+	(role abstract)
+	(single-slot usedBy
+		(type INSTANCE)
+;+		(allowed-classes)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot lastName
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot version
+		(type INTEGER)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot firstName
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot yearOfMaking
+		(type INTEGER)
+		(range 1950 %3FVARIABLE)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot KB_899224_Class9
+		(type INSTANCE)
+;+		(allowed-classes Programmer)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot langName
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot skills
+		(type SYMBOL)
+		(allowed-values Frontend Backend)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot creator
+		(type STRING)
+		(create-accessor read-write))
+	(multislot paradigm
+		(type SYMBOL)
+		(allowed-values oop functional declarative markup)
+		(create-accessor read-write))
+	(single-slot position
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot uses
+		(type INSTANCE)
+;+		(allowed-classes Language)
+		(create-accessor read-write))
+	(single-slot KB_899224_Class10
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot frameworks
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot version_
+		(type FLOAT)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot UsedBy
+		(type INSTANCE)
+;+		(allowed-classes Programmer)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot fn71256_Class0
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Language
+	(is-a USER)
+	(role abstract)
+	(multislot creator
+		(type STRING)
+		(create-accessor read-write))
+	(multislot paradigm
+		(type SYMBOL)
+		(allowed-values oop functional declarative markup procedural)
+		(create-accessor read-write))
+	(single-slot version_
+		(type FLOAT)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot langName
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot UsedBy
+		(type INSTANCE)
+;+		(allowed-classes Programmer)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot yearOfMaking
+		(type INTEGER)
+		(range 1950 %3FVARIABLE)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass HTML
+	(is-a Language)
+	(role concrete))
+
+(defclass Haskell
+	(is-a Language)
+	(role concrete))
+
+(defclass PHP
+	(is-a Language)
+	(role concrete))
+
+(defclass Ruby
+	(is-a Language)
+	(role concrete))
+
+(defclass Programmer
+	(is-a USER)
+	(role concrete)
+	(multislot uses
+		(type INSTANCE)
+;+		(allowed-classes Language)
+		(create-accessor read-write))
+	(single-slot lastName
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot skills
+		(type SYMBOL)
+		(allowed-values Frontend Backend)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot position
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot firstName
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
