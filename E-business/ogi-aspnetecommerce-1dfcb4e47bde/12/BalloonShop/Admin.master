@@ -1,0 +1,32 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Admin.master.cs" Inherits="Admin" %>
+
+<%@ Register Src="UserControls/UserInfo.ascx" TagName="UserInfo" TagPrefix="uc1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+  <title>BalloonShop Admin</title>
+</head>
+<body>
+  <form id="form1" runat="server">
+  <div class="Window">
+    <div class="Main">
+      <div class="Left">
+        <uc1:UserInfo ID="UserInfo1" runat="server" />
+      </div>
+      <div class="Right">
+        <div class="AdminHeader">
+          <asp:ContentPlaceHolder ID="titlePlaceHolder" runat="server">
+          </asp:ContentPlaceHolder>
+        </div>
+      </div>
+      <div class="AdminContents">
+        <asp:ContentPlaceHolder ID="adminPlaceHolder" runat="server">
+        </asp:ContentPlaceHolder>
+      </div>
+    </div>
+  </div>
+  </form>
+</body>
+</html>

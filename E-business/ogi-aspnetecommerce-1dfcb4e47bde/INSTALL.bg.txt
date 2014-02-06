@@ -1,0 +1,81 @@
+Инструкции за пускане на примерната е-бизнес система BalloonShop
+
+* Софтуер
+
+Изтегля се и се инсталира следния софтуер:
+
+- Visual Studio 2010 или
+  Visual Web Developer 2010 Express
+  <https://www.microsoft.com/visualstudio/en-us/products/2010-editions/express-iso>
+- SQL Server 2008 или
+  SQL Server 2008 R2 Express with Advanced Services
+  <https://www.microsoft.com/en-us/download/details.aspx?id=26729>
+  (SQLEXPRADV_x86_ENU.exe)
+
+* База данни
+
+** Начално създаване
+
+Настройва се от SQL Server Management Studio. Свързва се към БД като администратор.
+
+*** Mixed mode
+
+1. Properties на самия сървър (корена на дървото)
+2. Раздел Security
+3. Избира се SQL Server and Windows authentication mode
+4. Рестартира се SQL Server
+
+*** User
+
+1. New Login от Security/Logins
+2. Login name: balloonshop
+3. SQL Server authentication
+4. Password: ecommerce
+5. Без Enforce password policy
+6. OK
+
+*** Database
+
+1. New Database от Databases
+2. Database name: BalloonShop
+3. Owner: balloonshop
+4. OK
+
+** Начално запълване на БД
+
+Всяка глава има папка и вътре в нея има папка Database със SQL
+скриптове. Te се изпълняват последователно в SQL Server Management
+Studio, докато се стигне до нужната глава.
+
+* Visual Studio
+
+Използва се Open Website и се задава папката BalloonShop от
+съответната глава. Настройките за БД са в web.config и са за SQL
+Express Edition, иначе ако не е Express Edition, трябва да се махне
+"\SqlExpress" от низа за свързване.
+
+Ако браузърът при пускане (Run / F5) иска аутентикация още в началото,
+трябва да се отиде в менюто Website/Start Options на Visual Studio и
+да се махне отметката от NTLM Authentication.
+
+Глава 11 и всички следващи изискват да се пусне допълнителна програма
+за поддържане на потребители и роли в ASP.NET, на която просто се
+задава данните за свързване с БД:
+
+C:\Windows\Microsoft.NET\Framework\v2.0.50727\aspnet_regsql.exe
+
+За настройка на новите таблици се отива в менюто Website/ASP.NET
+Configuration на Visual Studio и се отваря уеб приложение в браузър. В
+раздела Security се добавят ролите Administrators и Customers, а после
+пак в Security се добавя потребител admin (може и друго име), който да
+има роля Administrators.
+
+* SMTP сървър
+
+От глава 4 се изпращат писма при грешки, ако се промени активира
+настройката EnableErrorLogEmail. От глава 18 нататък вече се изпращат
+писма до клиенти и доставчици.
+
+В поправения програмен код за SMTP сървър се използва
+localhost. Използвайте smtp4dev <https://smtp4dev.codeplex.com/> за
+приемане на изпратените писма.

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!ELEMENT ServerSettings (Weapons, Server+, Maps, Bots)>
+	<!ELEMENT Weapons (Name+)>
+		<!ELEMENT Name (Range, Damage, Animation, FireSpeed, AmmoSpeed, Scatter, Shots)>
+			<!ELEMENT Range (#PCDATA)>
+			<!ELEMENT Damage (#PCDATA)>
+			<!ELEMENT Animation (#PCDATA)>
+			<!ELEMENT FireSpeed (#PCDATA)>
+			<!ELEMENT AmmoSpeed (#PCDATA)>
+			<!ELEMENT Scatter (#PCDATA)>
+			<!ELEMENT Shots (#PCDATA)>
+	<!ELEMENT Server (Administrator+, Webpage, WelcomeMessage, PunkBuster, AllowVotes, GameType, CaptureLimit, TimeLimit, FragLimit)>
+		<!ELEMENT Administrator (Email?)>
+			<!ELEMENT Email (#PCDATA)>
+		<!ELEMENT Webpage (#PCDATA)>
+		<!ELEMENT WelcomeMessage (#PCDATA)>
+		<!ELEMENT PunkBuster (#PCDATA)>
+		<!ELEMENT AllowVotes (#PCDATA)>
+		<!ELEMENT GameType (#PCDATA)>
+		<!ELEMENT CaptureLimit (#PCDATA)>
+		<!ELEMENT TimeLimit (#PCDATA)>
+		<!ELEMENT FragLimit (#PCDATA)>
+	<!ELEMENT Maps (Map+)>
+		<!ELEMENT Map (Gravity, ArmorRespawn, MegaRespawn, QuadRespawn, HealthRespawn, WeaponRespawn, AmmoRespawn, MinPlayers)>
+			<!ELEMENT Gravity (#PCDATA)>
+			<!ELEMENT ArmorRespawn (#PCDATA)>
+			<!ELEMENT MegaRespawn (#PCDATA)>
+			<!ELEMENT QuadRespawn (#PCDATA)>
+			<!ELEMENT HealthRespawn (#PCDATA)>
+			<!ELEMENT WeaponRespawn (#PCDATA)>
+			<!ELEMENT AmmoRespawn (#PCDATA)>
+			<!ELEMENT MinPlayers (#PCDATA)>
+	<!ELEMENT Bots (Bot+)>
+		<!ELEMENT Bot (Accuracy)>
+			<!ELEMENT Accuracy (#PCDATA)>
+
+<!ATTLIST Name alias CDATA #REQUIRED> 
+<!ATTLIST Name name (Gauntlet|MachineGun|RailGun|ShotGun|GranadeLauncher|RocketLauncher|PlasmaGun|LightningGun|BFG) "Gauntlet"> 
+<!ATTLIST Administrator name CDATA #REQUIRED>
+<!ATTLIST Map name (q3_1.dm|q3_2.dm|q3_3.dm|q3_4.dm|q3_5.dm|q3_6.dm|q3_7.dm|q3_8.dm|q3_9.dm|q3_10.dm|q3_11.dm|q3_12.dm|
+		q3_13.dm|q3_14.dm|q3_15.dm|q3_16.dm|q3_17.dm) "q3_1.dm">
+<!ATTLIST Bot name CDATA #REQUIRED>
+<!ATTLIST Bot difficulty CDATA #REQUIRED>

@@ -1,0 +1,1063 @@
+﻿<?xml version="1.0"?>
+<Assembly>
+  <Namespace Name="Intelligencia">
+    <Namespace Name="UrlRewriter">
+      <Namespace Name="Transforms">
+        <Type Name="UpperTransform">
+          <Method Sig="instance string ApplyTransform(string )" />
+          <Method Sig="instance string get_Name()" />
+          <Method Sig="instance void .ctor()" />
+        </Type>
+        <Type Name="LowerTransform">
+          <Method Sig="instance string ApplyTransform(string )" />
+          <Method Sig="instance string get_Name()" />
+          <Method Sig="instance void .ctor()" />
+        </Type>
+        <Type Name="DecodeTransform">
+          <Method Sig="instance string ApplyTransform(string )" />
+          <Method Sig="instance string get_Name()" />
+          <Method Sig="instance void .ctor()" />
+        </Type>
+        <Type Name="StaticMappingTransform">
+          <Method Sig="instance void .ctor(string , class StringDictionary )" />
+          <Method Sig="instance string ApplyTransform(string )" />
+          <Method Sig="instance string get_Name()" />
+        </Type>
+        <Type Name="EncodeTransform">
+          <Method Sig="instance string ApplyTransform(string )" />
+          <Method Sig="instance string get_Name()" />
+          <Method Sig="instance void .ctor()" />
+        </Type>
+        <Type Name="Base64DecodeTransform">
+          <Method Sig="instance string ApplyTransform(string )" />
+          <Method Sig="instance string get_Name()" />
+          <Method Sig="instance void .ctor()" />
+        </Type>
+        <Type Name="Base64Transform">
+          <Method Sig="instance string ApplyTransform(string )" />
+          <Method Sig="instance string get_Name()" />
+          <Method Sig="instance void .ctor()" />
+        </Type>
+      </Namespace>
+      <Namespace Name="Parsers">
+        <Type Name="RewriteActionParserBase">
+          <Method Sig="instance class IRewriteAction Parse(class XmlNode , object )" />
+          <Method Sig="instance string get_Name()" />
+          <Method Sig="instance bool get_AllowsNestedActions()" />
+          <Method Sig="instance bool get_AllowsAttributes()" />
+        </Type>
+        <Type Name="NotFoundActionParser">
+          <Method Sig="instance void .ctor()" />
+          <Method Sig="instance string get_Name()" />
+          <Method Sig="instance bool get_AllowsNestedActions()" />
+          <Method Sig="instance bool get_AllowsAttributes()" />
+          <Method Sig="instance class IRewriteAction Parse(class XmlNode , object )" />
+        </Type>
+        <Type Name="ExistsConditionParser">
+          <Method Sig="instance class IRewriteCondition Parse(class XmlNode )" />
+          <Method Sig="instance void .ctor()" />
+        </Type>
+        <Type Name="RedirectActionParser">
+          <Method Sig="instance void .ctor()" />
+          <Method Sig="instance string get_Name()" />
+          <Method Sig="instance bool get_AllowsNestedActions()" />
+          <Method Sig="instance bool get_AllowsAttributes()" />
+          <Method Sig="instance class IRewriteAction Parse(class XmlNode , object )" />
+        </Type>
+        <Type Name="IfRedirectActionParser">
+          <Method Sig="instance void .ctor()" />
+          <Method Sig="instance string get_Name()" />
+          <Method Sig="instance bool get_AllowsNestedActions()" />
+          <Method Sig="instance bool get_AllowsAttributes()" />
+          <Method Sig="instance class IRewriteAction Parse(class XmlNode , object )" />
+        </Type>
+        <Type Name="SetStatusActionParser">
+          <Method Sig="instance void .ctor()" />
+          <Method Sig="instance string get_Name()" />
+          <Method Sig="instance bool get_AllowsNestedActions()" />
+          <Method Sig="instance bool get_AllowsAttributes()" />
+          <Method Sig="instance class IRewriteAction Parse(class XmlNode , object )" />
+        </Type>
+        <Type Name="NotAllowedActionParser">
+          <Method Sig="instance void .ctor()" />
+          <Method Sig="instance string get_Name()" />
+          <Method Sig="instance bool get_AllowsNestedActions()" />
+          <Method Sig="instance bool get_AllowsAttributes()" />
+          <Method Sig="instance class IRewriteAction Parse(class XmlNode , object )" />
+        </Type>
+        <Type Name="HeaderMatchConditionParser">
+          <Method Sig="instance class IRewriteCondition Parse(class XmlNode )">
+            <Demand>
+              <PermissionSet version="1" class="System.Security.PermissionSet">
+                <IPermission version="1" class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="ControlEvidence" />
+              </PermissionSet>
+            </Demand>
+            <Sandbox>
+              <PermissionSet version="1" class="System.Security.PermissionSet">
+                <IPermission version="1" class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="ControlEvidence" />
+              </PermissionSet>
+            </Sandbox>
+            <Stacks>
+              <CallStack>
+                <IPermission version="1" class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="ControlEvidence" />
+                <Method Type="System.Text.RegularExpressions.Regex" Sig="instance void .ctor(string , struct RegexOptions )" Asm="System" />
+                <Method Type="Intelligencia.UrlRewriter.Conditions.MatchCondition" Sig="instance void .ctor(string )" Asm="Intelligencia.UrlRewriter" />
+                <Method Type="Intelligencia.UrlRewriter.Conditions.PropertyMatchCondition" Sig="instance void .ctor(string , string )" Asm="Intelligencia.UrlRewriter" />
+                <Method Type="Intelligencia.UrlRewriter.Parsers.HeaderMatchConditionParser" Sig="instance class IRewriteCondition Parse(class XmlNode )" Asm="Intelligencia.UrlRewriter" />
+              </CallStack>
+            </Stacks>
+          </Method>
+          <Method Sig="instance void .ctor()" />
+        </Type>
+        <Type Name="MethodConditionParser">
+          <Method Sig="instance class IRewriteCondition Parse(class XmlNode )">
+            <Demand>
+              <PermissionSet version="1" class="System.Security.PermissionSet">
+                <IPermission version="1" class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="ControlEvidence" />
+              </PermissionSet>
+            </Demand>
+            <Sandbox>
+              <PermissionSet version="1" class="System.Security.PermissionSet">
+                <IPermission version="1" class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="ControlEvidence" />
+              </PermissionSet>
+            </Sandbox>
+            <Stacks>
+              <CallStack>
+                <IPermission version="1" class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="ControlEvidence" />
+                <Method Type="System.String" Sig="string Format(string , object )" Asm="mscorlib" />
+                <Method Type="Intelligencia.UrlRewriter.Conditions.MethodCondition" Sig="string GetMethodPattern(string )" Asm="Intelligencia.UrlRewriter" />
+                <Method Type="Intelligencia.UrlRewriter.Conditions.MethodCondition" Sig="instance void .ctor(string )" Asm="Intelligencia.UrlRewriter" />
+                <Method Type="Intelligencia.UrlRewriter.Parsers.MethodConditionParser" Sig="instance class IRewriteCondition Parse(class XmlNode )" Asm="Intelligencia.UrlRewriter" />
+              </CallStack>
+            </Stacks>
+          </Method>
+          <Method Sig="instance void .ctor()" />
+        </Type>
+        <Type Name="AddressConditionParser">
+          <Method Sig="instance class IRewriteCondition Parse(class XmlNode )">
+            <Demand>
+              <PermissionSet version="1" class="System.Security.PermissionSet">
+                <IPermission version="1" class="System.Security.Permissions.ReflectionPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="MemberAccess" />
+                <IPermission version="1" class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="ControlEvidence" />
+                <IPermission version="1" class="System.Security.Permissions.KeyContainerPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Unrestricted="true" />
+              </PermissionSet>
+            </Demand>
+            <Sandbox>
+              <PermissionSet version="1" class="System.Security.PermissionSet">
+                <IPermission version="1" class="System.Security.Permissions.ReflectionPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="MemberAccess" />
+                <IPermission version="1" class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="ControlEvidence" />
+                <IPermission version="1" class="System.Security.Permissions.KeyContainerPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Unrestricted="true" />
+              </PermissionSet>
+            </Sandbox>
+            <Stacks>
+              <CallStack>
+                <PermissionSet version="1" class="System.Security.PermissionSet">
+                  <IPermission version="1" class="System.Security.Permissions.ReflectionPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="MemberAccess" />
+                  <IPermission version="1" class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="ControlEvidence" />
+                  <IPermission version="1" class="System.Security.Permissions.KeyContainerPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Unrestricted="true" />
+                </PermissionSet>
+                <Method Type="System.Net.IPAddress" Sig="class IPAddress Parse(string )" Asm="System" />
+                <Method Type="Intelligencia.UrlRewriter.Utilities.IPRange" Sig="class IPRange Parse(string )" Asm="Intelligencia.UrlRewriter" />
+                <Method Type="Intelligencia.UrlRewriter.Conditions.AddressCondition" Sig="instance void .ctor(string )" Asm="Intelligencia.UrlRewriter" />
+                <Method Type="Intelligencia.UrlRewriter.Parsers.AddressConditionParser" Sig="instance class IRewriteCondition Parse(class XmlNode )" Asm="Intelligencia.UrlRewriter" />
+              </CallStack>
+            </Stacks>
+          </Method>
+          <Method Sig="instance void .ctor()" />
+        </Type>
+        <Type Name="UrlMatchConditionParser">
+          <Method Sig="instance class IRewriteCondition Parse(class XmlNode )" />
+          <Method Sig="instance void .ctor()" />
+        </Type>
+        <Type Name="SetCookieActionParser">
+          <Method Sig="instance void .ctor()" />
+          <Method Sig="instance string get_Name()" />
+          <Method Sig="instance bool get_AllowsNestedActions()" />
+          <Method Sig="instance bool get_AllowsAttributes()" />
+          <Method Sig="instance class IRewriteAction Parse(class XmlNode , object )" />
+        </Type>
+        <Type Name="NotImplementedActionParser">
+          <Method Sig="instance void .ctor()" />
+          <Method Sig="instance string get_Name()" />
+          <Method Sig="instance bool get_AllowsNestedActions()" />
+          <Method Sig="instance bool get_AllowsAttributes()" />
+          <Method Sig="instance class IRewriteAction Parse(class XmlNode , object )" />
+        </Type>
+        <Type Name="RewriteActionParser">
+          <Method Sig="instance void .ctor()" />
+          <Method Sig="instance string get_Name()" />
+          <Method Sig="instance bool get_AllowsNestedActions()" />
+          <Method Sig="instance bool get_AllowsAttributes()" />
+          <Method Sig="instance class IRewriteAction Parse(class XmlNode , object )" />
+        </Type>
+        <Type Name="GoneActionParser">
+          <Method Sig="instance void .ctor()" />
+          <Method Sig="instance string get_Name()" />
+          <Method Sig="instance bool get_AllowsNestedActions()" />
+          <Method Sig="instance bool get_AllowsAttributes()" />
+          <Method Sig="instance class IRewriteAction Parse(class XmlNode , object )" />
+        </Type>
+        <Type Name="ForbiddenActionParser">
+          <Method Sig="instance void .ctor()" />
+          <Method Sig="instance string get_Name()" />
+          <Method Sig="instance bool get_AllowsNestedActions()" />
+          <Method Sig="instance bool get_AllowsAttributes()" />
+          <Method Sig="instance class IRewriteAction Parse(class XmlNode , object )" />
+        </Type>
+        <Type Name="ConditionActionParser">
+          <Method Sig="instance string get_Name()" />
+          <Method Sig="instance bool get_AllowsNestedActions()" />
+          <Method Sig="instance bool get_AllowsAttributes()" />
+          <Method Sig="instance class IRewriteAction Parse(class XmlNode , object )" />
+          <Method Sig="instance void .ctor()" />
+        </Type>
+        <Type Name="AddHeaderActionParser">
+          <Method Sig="instance void .ctor()" />
+          <Method Sig="instance string get_Name()" />
+          <Method Sig="instance bool get_AllowsNestedActions()" />
+          <Method Sig="instance bool get_AllowsAttributes()" />
+          <Method Sig="instance class IRewriteAction Parse(class XmlNode , object )" />
+        </Type>
+        <Type Name="SetPropertyActionParser">
+          <Method Sig="instance void .ctor()" />
+          <Method Sig="instance string get_Name()" />
+          <Method Sig="instance bool get_AllowsNestedActions()" />
+          <Method Sig="instance bool get_AllowsAttributes()" />
+          <Method Sig="instance class IRewriteAction Parse(class XmlNode , object )" />
+        </Type>
+        <Type Name="IfRewriteActionParser">
+          <Method Sig="instance void .ctor()" />
+          <Method Sig="instance string get_Name()" />
+          <Method Sig="instance bool get_AllowsNestedActions()" />
+          <Method Sig="instance bool get_AllowsAttributes()" />
+          <Method Sig="instance class IRewriteAction Parse(class XmlNode , object )" />
+        </Type>
+        <Type Name="PropertyMatchConditionParser">
+          <Method Sig="instance class IRewriteCondition Parse(class XmlNode )">
+            <Demand>
+              <PermissionSet version="1" class="System.Security.PermissionSet">
+                <IPermission version="1" class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="ControlEvidence" />
+              </PermissionSet>
+            </Demand>
+            <Sandbox>
+              <PermissionSet version="1" class="System.Security.PermissionSet">
+                <IPermission version="1" class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="ControlEvidence" />
+              </PermissionSet>
+            </Sandbox>
+            <Stacks>
+              <CallStack>
+                <IPermission version="1" class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="ControlEvidence" />
+                <Method Type="System.Text.RegularExpressions.Regex" Sig="instance void .ctor(string , struct RegexOptions )" Asm="System" />
+                <Method Type="Intelligencia.UrlRewriter.Conditions.MatchCondition" Sig="instance void .ctor(string )" Asm="Intelligencia.UrlRewriter" />
+                <Method Type="Intelligencia.UrlRewriter.Conditions.PropertyMatchCondition" Sig="instance void .ctor(string , string )" Asm="Intelligencia.UrlRewriter" />
+                <Method Type="Intelligencia.UrlRewriter.Parsers.PropertyMatchConditionParser" Sig="instance class IRewriteCondition Parse(class XmlNode )" Asm="Intelligencia.UrlRewriter" />
+              </CallStack>
+            </Stacks>
+          </Method>
+          <Method Sig="instance void .ctor()" />
+        </Type>
+      </Namespace>
+      <Namespace Name="Configuration">
+        <Type Name="RewriterConfigurationSectionHandler">
+          <Method Sig="instance void .ctor()" />
+        </Type>
+        <Type Name="RewriterConfiguration">
+          <Method Sig="instance class IList get_Rules()" />
+          <Method Sig="instance class ActionParserFactory get_ActionParserFactory()" />
+          <Method Sig="instance class TransformFactory get_TransformFactory()" />
+          <Method Sig="instance class ConditionParserPipeline get_ConditionParserPipeline()" />
+          <Method Sig="instance class IDictionary get_ErrorHandlers()" />
+          <Method Sig="instance class IRewriteLogger get_Logger()" />
+          <Method Sig="instance void set_Logger(class IRewriteLogger )" />
+          <Method Sig="instance class StringCollection get_DefaultDocuments()" />
+          <Method Sig="class RewriterConfiguration Create()" />
+          <Method Sig="class RewriterConfiguration get_Current()">
+            <Demand>
+              <PermissionSet version="1" class="System.Security.PermissionSet" Unrestricted="true" />
+            </Demand>
+            <Sandbox>
+              <PermissionSet version="1" class="System.Security.PermissionSet" Unrestricted="true" />
+            </Sandbox>
+            <Stacks>
+              <CallStack>
+                <IPermission version="1" class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" PathDiscovery="*AllFiles*" />
+                <Method Type="System.Web.HttpRuntime" Sig="class Cache get_Cache()" Asm="System.Web" />
+                <Method Type="Intelligencia.UrlRewriter.Configuration.RewriterConfiguration" Sig="class RewriterConfiguration get_Current()" Asm="Intelligencia.UrlRewriter" />
+              </CallStack>
+              <CallStack>
+                <PermissionSet version="1" class="System.Security.PermissionSet">
+                  <IPermission version="1" class="System.Security.Permissions.ReflectionPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="MemberAccess" />
+                  <IPermission version="1" class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="ControlEvidence" />
+                  <IPermission version="1" class="System.Security.Permissions.KeyContainerPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Unrestricted="true" />
+                </PermissionSet>
+                <Method Type="System.Configuration.ConfigurationSettings" Sig="object GetConfig(string )" Asm="System" />
+                <Method Type="Intelligencia.UrlRewriter.Configuration.RewriterConfiguration" Sig="class RewriterConfiguration Load()" Asm="Intelligencia.UrlRewriter" />
+                <Method Type="Intelligencia.UrlRewriter.Configuration.RewriterConfiguration" Sig="class RewriterConfiguration get_Current()" Asm="Intelligencia.UrlRewriter" />
+              </CallStack>
+              <CallStack>
+                <PermissionSet version="1" class="System.Security.PermissionSet" Unrestricted="true" />
+                <Method Type="System.Web.HttpServerUtility" Sig="instance string MapPath(string )" Asm="System.Web" />
+                <Method Type="Intelligencia.UrlRewriter.Configuration.RewriterConfiguration" Sig="class RewriterConfiguration Load()" Asm="Intelligencia.UrlRewriter" />
+                <Method Type="Intelligencia.UrlRewriter.Configuration.RewriterConfiguration" Sig="class RewriterConfiguration get_Current()" Asm="Intelligencia.UrlRewriter" />
+              </CallStack>
+            </Stacks>
+          </Method>
+          <Method Sig="class RewriterConfiguration Load()">
+            <Demand>
+              <PermissionSet version="1" class="System.Security.PermissionSet" Unrestricted="true" />
+            </Demand>
+            <Sandbox>
+              <PermissionSet version="1" class="System.Security.PermissionSet" Unrestricted="true" />
+            </Sandbox>
+          </Method>
+          <Method Sig="class RewriterConfiguration LoadFromFile(string )">
+            <Demand>
+              <PermissionSet version="1" class="System.Security.PermissionSet">
+                <IPermission version="1" class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" PathDiscovery="*AllFiles*" />
+                <IPermission version="1" class="System.Security.Permissions.ReflectionPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="MemberAccess" />
+              </PermissionSet>
+            </Demand>
+            <Sandbox>
+              <PermissionSet version="1" class="System.Security.PermissionSet">
+                <IPermission version="1" class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" PathDiscovery="*AllFiles*" />
+                <IPermission version="1" class="System.Security.Permissions.ReflectionPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="MemberAccess" />
+              </PermissionSet>
+            </Sandbox>
+          </Method>
+          <Method Sig="class RewriterConfiguration LoadFromNode(class XmlNode )">
+            <Demand>
+              <PermissionSet version="1" class="System.Security.PermissionSet">
+                <IPermission version="1" class="System.Security.Permissions.ReflectionPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="MemberAccess" />
+              </PermissionSet>
+            </Demand>
+            <Sandbox>
+              <PermissionSet version="1" class="System.Security.PermissionSet">
+                <IPermission version="1" class="System.Security.Permissions.ReflectionPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="MemberAccess" />
+              </PermissionSet>
+            </Sandbox>
+          </Method>
+          <Method Sig="void .cctor()" />
+        </Type>
+        <Type Name="TransformFactory">
+          <Method Sig="instance void AddTransform(string )">
+            <Demand>
+              <PermissionSet version="1" class="System.Security.PermissionSet">
+                <IPermission version="1" class="System.Security.Permissions.ReflectionPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="MemberAccess" />
+              </PermissionSet>
+            </Demand>
+            <Sandbox>
+              <PermissionSet version="1" class="System.Security.PermissionSet">
+                <IPermission version="1" class="System.Security.Permissions.ReflectionPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="MemberAccess" />
+              </PermissionSet>
+            </Sandbox>
+            <Stacks>
+              <CallStack>
+                <IPermission version="1" class="System.Security.Permissions.ReflectionPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="MemberAccess" />
+                <Method Type="System.AppDomain" Sig="instance object CreateInstanceAndUnwrap(string , string , bool , struct BindingFlags , class Binder , [] object , class CultureInfo , [] object , class Evidence )" Asm="mscorlib" />
+                <Method Type="Intelligencia.UrlRewriter.Utilities.TypeHelper" Sig="object Activate(string , string , [] object )" Asm="Intelligencia.UrlRewriter" />
+                <Method Type="Intelligencia.UrlRewriter.Utilities.TypeHelper" Sig="object Activate(string , [] object )" Asm="Intelligencia.UrlRewriter" />
+                <Method Type="Intelligencia.UrlRewriter.Configuration.TransformFactory" Sig="instance void AddTransform(string )" Asm="Intelligencia.UrlRewriter" />
+              </CallStack>
+            </Stacks>
+          </Method>
+          <Method Sig="instance void AddTransform(class IRewriteTransform )" />
+          <Method Sig="instance class IRewriteTransform GetTransform(string )" />
+          <Method Sig="instance void .ctor()" />
+        </Type>
+        <Type Name="ConditionParserPipeline">
+          <Method Sig="instance void AddParser(string )">
+            <Demand>
+              <PermissionSet version="1" class="System.Security.PermissionSet">
+                <IPermission version="1" class="System.Security.Permissions.ReflectionPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="MemberAccess" />
+              </PermissionSet>
+            </Demand>
+            <Sandbox>
+              <PermissionSet version="1" class="System.Security.PermissionSet">
+                <IPermission version="1" class="System.Security.Permissions.ReflectionPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="MemberAccess" />
+              </PermissionSet>
+            </Sandbox>
+            <Stacks>
+              <CallStack>
+                <IPermission version="1" class="System.Security.Permissions.ReflectionPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="MemberAccess" />
+                <Method Type="System.AppDomain" Sig="instance object CreateInstanceAndUnwrap(string , string , bool , struct BindingFlags , class Binder , [] object , class CultureInfo , [] object , class Evidence )" Asm="mscorlib" />
+                <Method Type="Intelligencia.UrlRewriter.Utilities.TypeHelper" Sig="object Activate(string , string , [] object )" Asm="Intelligencia.UrlRewriter" />
+                <Method Type="Intelligencia.UrlRewriter.Utilities.TypeHelper" Sig="object Activate(string , [] object )" Asm="Intelligencia.UrlRewriter" />
+                <Method Type="Intelligencia.UrlRewriter.Configuration.ConditionParserPipeline" Sig="instance void AddParser(string )" Asm="Intelligencia.UrlRewriter" />
+              </CallStack>
+            </Stacks>
+          </Method>
+          <Method Sig="instance void AddParser(class IRewriteConditionParser )" />
+          <Method Sig="instance void .ctor()" />
+        </Type>
+        <Type Name="ActionParserFactory">
+          <Method Sig="instance void AddParser(string )">
+            <Demand>
+              <PermissionSet version="1" class="System.Security.PermissionSet">
+                <IPermission version="1" class="System.Security.Permissions.ReflectionPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="MemberAccess" />
+              </PermissionSet>
+            </Demand>
+            <Sandbox>
+              <PermissionSet version="1" class="System.Security.PermissionSet">
+                <IPermission version="1" class="System.Security.Permissions.ReflectionPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="MemberAccess" />
+              </PermissionSet>
+            </Sandbox>
+            <Stacks>
+              <CallStack>
+                <IPermission version="1" class="System.Security.Permissions.ReflectionPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="MemberAccess" />
+                <Method Type="System.AppDomain" Sig="instance object CreateInstanceAndUnwrap(string , string , bool , struct BindingFlags , class Binder , [] object , class CultureInfo , [] object , class Evidence )" Asm="mscorlib" />
+                <Method Type="Intelligencia.UrlRewriter.Utilities.TypeHelper" Sig="object Activate(string , string , [] object )" Asm="Intelligencia.UrlRewriter" />
+                <Method Type="Intelligencia.UrlRewriter.Utilities.TypeHelper" Sig="object Activate(string , [] object )" Asm="Intelligencia.UrlRewriter" />
+                <Method Type="Intelligencia.UrlRewriter.Configuration.ActionParserFactory" Sig="instance void AddParser(string )" Asm="Intelligencia.UrlRewriter" />
+              </CallStack>
+            </Stacks>
+          </Method>
+          <Method Sig="instance void AddParser(class IRewriteActionParser )" />
+          <Method Sig="instance class IList GetParsers(string )" />
+          <Method Sig="instance void .ctor()" />
+        </Type>
+        <Type Name="RewriterConfigurationReader">
+          <Method Sig="instance void .ctor()" />
+          <Method Sig="instance object Read(class XmlNode )">
+            <Demand>
+              <PermissionSet version="1" class="System.Security.PermissionSet">
+                <IPermission version="1" class="System.Security.Permissions.ReflectionPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="MemberAccess" />
+              </PermissionSet>
+            </Demand>
+            <Sandbox>
+              <PermissionSet version="1" class="System.Security.PermissionSet">
+                <IPermission version="1" class="System.Security.Permissions.ReflectionPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="MemberAccess" />
+              </PermissionSet>
+            </Sandbox>
+          </Method>
+        </Type>
+      </Namespace>
+      <Namespace Name="Conditions">
+        <Type Name="AddressCondition">
+          <Method Sig="instance void .ctor(string )">
+            <Demand>
+              <PermissionSet version="1" class="System.Security.PermissionSet">
+                <IPermission version="1" class="System.Security.Permissions.ReflectionPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="MemberAccess" />
+                <IPermission version="1" class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="ControlEvidence" />
+                <IPermission version="1" class="System.Security.Permissions.KeyContainerPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Unrestricted="true" />
+              </PermissionSet>
+            </Demand>
+            <Sandbox>
+              <PermissionSet version="1" class="System.Security.PermissionSet">
+                <IPermission version="1" class="System.Security.Permissions.ReflectionPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="MemberAccess" />
+                <IPermission version="1" class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="ControlEvidence" />
+                <IPermission version="1" class="System.Security.Permissions.KeyContainerPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Unrestricted="true" />
+              </PermissionSet>
+            </Sandbox>
+            <Stacks>
+              <CallStack>
+                <IPermission version="1" class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="ControlEvidence" />
+                <Method Type="System.Text.RegularExpressions.Regex" Sig="string Replace(string , string , string )" Asm="System" />
+                <Method Type="Intelligencia.UrlRewriter.Utilities.IPRange" Sig="class IPRange Parse(string )" Asm="Intelligencia.UrlRewriter" />
+                <Method Type="Intelligencia.UrlRewriter.Conditions.AddressCondition" Sig="instance void .ctor(string )" Asm="Intelligencia.UrlRewriter" />
+              </CallStack>
+              <CallStack>
+                <PermissionSet version="1" class="System.Security.PermissionSet">
+                  <IPermission version="1" class="System.Security.Permissions.ReflectionPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="MemberAccess" />
+                  <IPermission version="1" class="System.Security.Permissions.KeyContainerPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Unrestricted="true" />
+                </PermissionSet>
+                <Method Type="System.Net.IPAddress" Sig="class IPAddress Parse(string )" Asm="System" />
+                <Method Type="Intelligencia.UrlRewriter.Utilities.IPRange" Sig="class IPRange Parse(string )" Asm="Intelligencia.UrlRewriter" />
+                <Method Type="Intelligencia.UrlRewriter.Conditions.AddressCondition" Sig="instance void .ctor(string )" Asm="Intelligencia.UrlRewriter" />
+              </CallStack>
+            </Stacks>
+          </Method>
+          <Method Sig="instance bool IsMatch(class RewriteContext )">
+            <Demand>
+              <PermissionSet version="1" class="System.Security.PermissionSet">
+                <IPermission version="1" class="System.Security.Permissions.ReflectionPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="MemberAccess" />
+                <IPermission version="1" class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="ControlEvidence" />
+                <IPermission version="1" class="System.Security.Permissions.KeyContainerPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Unrestricted="true" />
+              </PermissionSet>
+            </Demand>
+            <Sandbox>
+              <PermissionSet version="1" class="System.Security.PermissionSet">
+                <IPermission version="1" class="System.Security.Permissions.ReflectionPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="MemberAccess" />
+                <IPermission version="1" class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="ControlEvidence" />
+                <IPermission version="1" class="System.Security.Permissions.KeyContainerPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Unrestricted="true" />
+              </PermissionSet>
+            </Sandbox>
+            <Stacks>
+              <CallStack>
+                <PermissionSet version="1" class="System.Security.PermissionSet">
+                  <IPermission version="1" class="System.Security.Permissions.ReflectionPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="MemberAccess" />
+                  <IPermission version="1" class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="ControlEvidence" />
+                  <IPermission version="1" class="System.Security.Permissions.KeyContainerPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Unrestricted="true" />
+                </PermissionSet>
+                <Method Type="System.Net.IPAddress" Sig="class IPAddress Parse(string )" Asm="System" />
+                <Method Type="Intelligencia.UrlRewriter.Conditions.AddressCondition" Sig="instance bool IsMatch(class RewriteContext )" Asm="Intelligencia.UrlRewriter" />
+              </CallStack>
+            </Stacks>
+          </Method>
+        </Type>
+        <Type Name="MatchCondition">
+          <Method Sig="instance void .ctor(string )">
+            <Demand>
+              <PermissionSet version="1" class="System.Security.PermissionSet">
+                <IPermission version="1" class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="ControlEvidence" />
+              </PermissionSet>
+            </Demand>
+            <Sandbox>
+              <PermissionSet version="1" class="System.Security.PermissionSet">
+                <IPermission version="1" class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="ControlEvidence" />
+              </PermissionSet>
+            </Sandbox>
+            <Stacks>
+              <CallStack>
+                <IPermission version="1" class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="ControlEvidence" />
+                <Method Type="System.Text.RegularExpressions.Regex" Sig="instance void .ctor(string , struct RegexOptions )" Asm="System" />
+                <Method Type="Intelligencia.UrlRewriter.Conditions.MatchCondition" Sig="instance void .ctor(string )" Asm="Intelligencia.UrlRewriter" />
+              </CallStack>
+            </Stacks>
+          </Method>
+          <Method Sig="instance bool get_Negative()" />
+          <Method Sig="instance void set_Negative(bool )" />
+          <Method Sig="instance class Regex get_Pattern()" />
+          <Method Sig="instance void set_Pattern(class Regex )" />
+          <Method Sig="instance bool IsMatch(class RewriteContext )" />
+        </Type>
+        <Type Name="MethodCondition">
+          <Method Sig="instance void .ctor(string )">
+            <Demand>
+              <PermissionSet version="1" class="System.Security.PermissionSet">
+                <IPermission version="1" class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="ControlEvidence" />
+              </PermissionSet>
+            </Demand>
+            <Sandbox>
+              <PermissionSet version="1" class="System.Security.PermissionSet">
+                <IPermission version="1" class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="ControlEvidence" />
+              </PermissionSet>
+            </Sandbox>
+            <Stacks>
+              <CallStack>
+                <IPermission version="1" class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="ControlEvidence" />
+                <Method Type="System.Text.RegularExpressions.Regex" Sig="string Replace(string , string , string )" Asm="System" />
+                <Method Type="Intelligencia.UrlRewriter.Conditions.MethodCondition" Sig="string GetMethodPattern(string )" Asm="Intelligencia.UrlRewriter" />
+                <Method Type="Intelligencia.UrlRewriter.Conditions.MethodCondition" Sig="instance void .ctor(string )" Asm="Intelligencia.UrlRewriter" />
+              </CallStack>
+            </Stacks>
+          </Method>
+          <Method Sig="instance bool IsMatch(class RewriteContext )" />
+        </Type>
+        <Type Name="PropertyMatchCondition">
+          <Method Sig="instance void .ctor(string , string )">
+            <Demand>
+              <PermissionSet version="1" class="System.Security.PermissionSet">
+                <IPermission version="1" class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="ControlEvidence" />
+              </PermissionSet>
+            </Demand>
+            <Sandbox>
+              <PermissionSet version="1" class="System.Security.PermissionSet">
+                <IPermission version="1" class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="ControlEvidence" />
+              </PermissionSet>
+            </Sandbox>
+          </Method>
+          <Method Sig="instance string get_PropertyName()" />
+          <Method Sig="instance void set_PropertyName(string )" />
+          <Method Sig="instance bool IsMatch(class RewriteContext )" />
+        </Type>
+        <Type Name="ExistsCondition">
+          <Method Sig="instance void .ctor(string )" />
+          <Method Sig="instance bool IsMatch(class RewriteContext )">
+            <Demand>
+              <PermissionSet version="1" class="System.Security.PermissionSet">
+                <IPermission version="1" class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="ControlEvidence" />
+              </PermissionSet>
+            </Demand>
+            <Sandbox>
+              <PermissionSet version="1" class="System.Security.PermissionSet">
+                <IPermission version="1" class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="ControlEvidence" />
+              </PermissionSet>
+            </Sandbox>
+            <Stacks>
+              <CallStack>
+                <IPermission version="1" class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="ControlEvidence" />
+                <Method Type="System.Text.StringBuilder" Sig="instance string ToString()" Asm="mscorlib" />
+                <Method Type="Intelligencia.UrlRewriter.RewriterEngine" Sig="instance string Expand(class RewriteContext , string )" Asm="Intelligencia.UrlRewriter" />
+                <Method Type="Intelligencia.UrlRewriter.RewriteContext" Sig="instance string Expand(string )" Asm="Intelligencia.UrlRewriter" />
+                <Method Type="Intelligencia.UrlRewriter.Conditions.ExistsCondition" Sig="instance bool IsMatch(class RewriteContext )" Asm="Intelligencia.UrlRewriter" />
+              </CallStack>
+            </Stacks>
+          </Method>
+        </Type>
+        <Type Name="UrlMatchCondition">
+          <Method Sig="instance void .ctor(string )" />
+          <Method Sig="instance bool IsMatch(class RewriteContext )">
+            <Demand>
+              <PermissionSet version="1" class="System.Security.PermissionSet">
+                <IPermission version="1" class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="ControlEvidence" />
+              </PermissionSet>
+            </Demand>
+            <Sandbox>
+              <PermissionSet version="1" class="System.Security.PermissionSet">
+                <IPermission version="1" class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="ControlEvidence" />
+              </PermissionSet>
+            </Sandbox>
+            <Stacks>
+              <CallStack>
+                <IPermission version="1" class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="ControlEvidence" />
+                <Method Type="System.Text.RegularExpressions.Regex" Sig="instance void .ctor(string , struct RegexOptions )" Asm="System" />
+                <Method Type="Intelligencia.UrlRewriter.Conditions.UrlMatchCondition" Sig="instance bool IsMatch(class RewriteContext )" Asm="Intelligencia.UrlRewriter" />
+              </CallStack>
+            </Stacks>
+          </Method>
+          <Method Sig="instance string get_Pattern()" />
+          <Method Sig="instance void set_Pattern(string )" />
+        </Type>
+      </Namespace>
+      <Namespace Name="Actions">
+        <Type Name="SetStatusAction">
+          <Method Sig="instance void .ctor(struct HttpStatusCode )" />
+          <Method Sig="instance struct HttpStatusCode get_StatusCode()" />
+          <Method Sig="instance void set_StatusCode(struct HttpStatusCode )" />
+          <Method Sig="instance void Execute(class RewriteContext )" />
+          <Method Sig="instance struct RewriteProcessing get_Processing()" />
+        </Type>
+        <Type Name="NotFoundAction">
+          <Method Sig="instance void .ctor()" />
+        </Type>
+        <Type Name="SetLocationAction">
+          <Method Sig="instance void .ctor(string )" />
+          <Method Sig="instance string get_Location()" />
+          <Method Sig="instance void set_Location(string )" />
+          <Method Sig="instance void Execute(class RewriteContext )">
+            <Demand>
+              <PermissionSet version="1" class="System.Security.PermissionSet">
+                <IPermission version="1" class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="ControlEvidence" />
+              </PermissionSet>
+            </Demand>
+            <Sandbox>
+              <PermissionSet version="1" class="System.Security.PermissionSet">
+                <IPermission version="1" class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="ControlEvidence" />
+              </PermissionSet>
+            </Sandbox>
+            <Stacks>
+              <CallStack>
+                <IPermission version="1" class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="ControlEvidence" />
+                <Method Type="System.Text.RegularExpressions.Regex" Sig="class Match Match(string , string )" Asm="System" />
+                <Method Type="Intelligencia.UrlRewriter.RewriterEngine" Sig="instance string Reduce(class RewriteContext , class StringReader )" Asm="Intelligencia.UrlRewriter" />
+                <Method Type="Intelligencia.UrlRewriter.RewriterEngine" Sig="instance string Expand(class RewriteContext , string )" Asm="Intelligencia.UrlRewriter" />
+                <Method Type="Intelligencia.UrlRewriter.RewriteContext" Sig="instance string Expand(string )" Asm="Intelligencia.UrlRewriter" />
+                <Method Type="Intelligencia.UrlRewriter.Actions.SetLocationAction" Sig="instance void Execute(class RewriteContext )" Asm="Intelligencia.UrlRewriter" />
+              </CallStack>
+            </Stacks>
+          </Method>
+          <Method Sig="instance struct RewriteProcessing get_Processing()" />
+        </Type>
+        <Type Name="RewriteAction">
+          <Method Sig="instance void .ctor(string , struct RewriteProcessing )" />
+          <Method Sig="instance void Execute(class RewriteContext )">
+            <Demand>
+              <PermissionSet version="1" class="System.Security.PermissionSet">
+                <IPermission version="1" class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="ControlEvidence" />
+              </PermissionSet>
+            </Demand>
+            <Sandbox>
+              <PermissionSet version="1" class="System.Security.PermissionSet">
+                <IPermission version="1" class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="ControlEvidence" />
+              </PermissionSet>
+            </Sandbox>
+            <Stacks>
+              <CallStack>
+                <IPermission version="1" class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="ControlEvidence" />
+                <Method Type="System.Text.StringBuilder" Sig="instance string ToString()" Asm="mscorlib" />
+                <Method Type="Intelligencia.UrlRewriter.RewriterEngine" Sig="instance string Expand(class RewriteContext , string )" Asm="Intelligencia.UrlRewriter" />
+                <Method Type="Intelligencia.UrlRewriter.RewriteContext" Sig="instance string Expand(string )" Asm="Intelligencia.UrlRewriter" />
+                <Method Type="Intelligencia.UrlRewriter.Actions.SetLocationAction" Sig="instance void Execute(class RewriteContext )" Asm="Intelligencia.UrlRewriter" />
+                <Method Type="Intelligencia.UrlRewriter.Actions.RewriteAction" Sig="instance void Execute(class RewriteContext )" Asm="Intelligencia.UrlRewriter" />
+              </CallStack>
+            </Stacks>
+          </Method>
+          <Method Sig="instance struct RewriteProcessing get_Processing()" />
+          <Method Sig="instance bool IsMatch(class RewriteContext )" />
+          <Method Sig="instance class IList get_Conditions()" />
+        </Type>
+        <Type Name="ConditionalAction">
+          <Method Sig="instance void .ctor()" />
+          <Method Sig="instance class IList get_Conditions()" />
+          <Method Sig="instance class IList get_Actions()" />
+          <Method Sig="instance bool IsMatch(class RewriteContext )" />
+          <Method Sig="instance void Execute(class RewriteContext )" />
+          <Method Sig="instance struct RewriteProcessing get_Processing()" />
+        </Type>
+        <Type Name="AddHeaderAction">
+          <Method Sig="instance void .ctor(string , string )" />
+          <Method Sig="instance string get_Header()" />
+          <Method Sig="instance void set_Header(string )" />
+          <Method Sig="instance string get_Value()" />
+          <Method Sig="instance void set_Value(string )" />
+          <Method Sig="instance void Execute(class RewriteContext )" />
+          <Method Sig="instance struct RewriteProcessing get_Processing()" />
+        </Type>
+        <Type Name="SetCookieAction">
+          <Method Sig="instance void .ctor(string , string )" />
+          <Method Sig="instance string get_Name()" />
+          <Method Sig="instance void set_Name(string )" />
+          <Method Sig="instance string get_Value()" />
+          <Method Sig="instance void set_Value(string )" />
+          <Method Sig="instance void Execute(class RewriteContext )">
+            <Demand>
+              <PermissionSet version="1" class="System.Security.PermissionSet">
+                <IPermission version="1" class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" PathDiscovery="*AllFiles*" />
+              </PermissionSet>
+            </Demand>
+            <Sandbox>
+              <PermissionSet version="1" class="System.Security.PermissionSet">
+                <IPermission version="1" class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" PathDiscovery="*AllFiles*" />
+                <IPermission Level="Minimal" version="1" class="System.Web.AspNetHostingPermission, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+              </PermissionSet>
+            </Sandbox>
+            <Stacks>
+              <CallStack>
+                <IPermission version="1" class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" PathDiscovery="*AllFiles*" />
+                <Method Type="System.Web.HttpCookie" Sig="instance void .ctor(string , string )" Asm="System.Web" />
+                <Method Type="Intelligencia.UrlRewriter.Actions.SetCookieAction" Sig="instance void Execute(class RewriteContext )" Asm="Intelligencia.UrlRewriter" />
+              </CallStack>
+            </Stacks>
+          </Method>
+          <Method Sig="instance struct RewriteProcessing get_Processing()" />
+        </Type>
+        <Type Name="RedirectAction">
+          <Method Sig="instance void .ctor(string , bool )" />
+          <Method Sig="instance void Execute(class RewriteContext )">
+            <Demand>
+              <PermissionSet version="1" class="System.Security.PermissionSet">
+                <IPermission version="1" class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="ControlEvidence" />
+              </PermissionSet>
+            </Demand>
+            <Sandbox>
+              <PermissionSet version="1" class="System.Security.PermissionSet">
+                <IPermission version="1" class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="ControlEvidence" />
+              </PermissionSet>
+            </Sandbox>
+            <Stacks>
+              <CallStack>
+                <IPermission version="1" class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="ControlEvidence" />
+                <Method Type="System.Text.StringBuilder" Sig="instance string ToString()" Asm="mscorlib" />
+                <Method Type="Intelligencia.UrlRewriter.RewriterEngine" Sig="instance string Expand(class RewriteContext , string )" Asm="Intelligencia.UrlRewriter" />
+                <Method Type="Intelligencia.UrlRewriter.RewriteContext" Sig="instance string Expand(string )" Asm="Intelligencia.UrlRewriter" />
+                <Method Type="Intelligencia.UrlRewriter.Actions.SetLocationAction" Sig="instance void Execute(class RewriteContext )" Asm="Intelligencia.UrlRewriter" />
+                <Method Type="Intelligencia.UrlRewriter.Actions.RedirectAction" Sig="instance void Execute(class RewriteContext )" Asm="Intelligencia.UrlRewriter" />
+              </CallStack>
+            </Stacks>
+          </Method>
+          <Method Sig="instance struct RewriteProcessing get_Processing()" />
+          <Method Sig="instance bool IsMatch(class RewriteContext )" />
+          <Method Sig="instance class IList get_Conditions()" />
+        </Type>
+        <Type Name="MethodNotAllowedAction">
+          <Method Sig="instance void .ctor()" />
+        </Type>
+        <Type Name="SetPropertyAction">
+          <Method Sig="instance void .ctor(string , string )" />
+          <Method Sig="instance string get_Name()" />
+          <Method Sig="instance void set_Name(string )" />
+          <Method Sig="instance string get_Value()" />
+          <Method Sig="instance void set_Value(string )" />
+          <Method Sig="instance void Execute(class RewriteContext )" />
+          <Method Sig="instance struct RewriteProcessing get_Processing()" />
+        </Type>
+        <Type Name="GoneAction">
+          <Method Sig="instance void .ctor()" />
+        </Type>
+        <Type Name="NotImplementedAction">
+          <Method Sig="instance void .ctor()" />
+        </Type>
+        <Type Name="ForbiddenAction">
+          <Method Sig="instance void .ctor()" />
+        </Type>
+      </Namespace>
+      <Type Name="Form">
+        <Method Sig="instance void .ctor()">
+          <Sandbox>
+            <PermissionSet version="1" class="System.Security.PermissionSet">
+              <IPermission Level="Minimal" version="1" class="System.Web.AspNetHostingPermission, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+            </PermissionSet>
+          </Sandbox>
+        </Method>
+      </Type>
+      <Namespace Name="Utilities">
+        <Type Name="MapPathDelegate">
+          <Method Sig="instance void .ctor(object , intptr )" />
+          <Method Sig="instance string Invoke(string )" />
+          <Method Sig="instance class IAsyncResult BeginInvoke(string , class AsyncCallback , object )" />
+          <Method Sig="instance string EndInvoke(class IAsyncResult )" />
+        </Type>
+        <Type Name="IPRange">
+          <Method Sig="instance void .ctor(class IPAddress )" />
+          <Method Sig="instance void .ctor(class IPAddress , class IPAddress )" />
+          <Method Sig="class IPRange Parse(string )">
+            <Demand>
+              <PermissionSet version="1" class="System.Security.PermissionSet">
+                <IPermission version="1" class="System.Security.Permissions.ReflectionPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="MemberAccess" />
+                <IPermission version="1" class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="ControlEvidence" />
+                <IPermission version="1" class="System.Security.Permissions.KeyContainerPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Unrestricted="true" />
+              </PermissionSet>
+            </Demand>
+            <Sandbox>
+              <PermissionSet version="1" class="System.Security.PermissionSet">
+                <IPermission version="1" class="System.Security.Permissions.ReflectionPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="MemberAccess" />
+                <IPermission version="1" class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="ControlEvidence" />
+                <IPermission version="1" class="System.Security.Permissions.KeyContainerPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Unrestricted="true" />
+              </PermissionSet>
+            </Sandbox>
+          </Method>
+          <Method Sig="instance bool InRange(class IPAddress )" />
+          <Method Sig="instance class IPAddress get_MinimumAddress()" />
+          <Method Sig="instance class IPAddress get_MaximumAddress()" />
+          <Method Sig="int Compare(class IPAddress , class IPAddress )" />
+        </Type>
+      </Namespace>
+      <Type Name="RewriterHttpModule">
+        <Method Sig="class RewriterConfiguration get_Configuration()">
+          <Demand>
+            <PermissionSet version="1" class="System.Security.PermissionSet" Unrestricted="true" />
+          </Demand>
+          <Sandbox>
+            <PermissionSet version="1" class="System.Security.PermissionSet" Unrestricted="true" />
+          </Sandbox>
+          <Stacks>
+            <CallStack>
+              <PermissionSet version="1" class="System.Security.PermissionSet" Unrestricted="true" />
+              <Method Type="System.Web.Caching.Cache" Sig="instance object Add(string , object , class CacheDependency , struct DateTime , struct TimeSpan , struct CacheItemPriority , class CacheItemRemovedCallback )" Asm="System.Web" />
+              <Method Type="Intelligencia.UrlRewriter.Configuration.RewriterConfiguration" Sig="class RewriterConfiguration Load()" Asm="Intelligencia.UrlRewriter" />
+              <Method Type="Intelligencia.UrlRewriter.Configuration.RewriterConfiguration" Sig="class RewriterConfiguration get_Current()" Asm="Intelligencia.UrlRewriter" />
+              <Method Type="Intelligencia.UrlRewriter.RewriterHttpModule" Sig="class RewriterConfiguration get_Configuration()" Asm="Intelligencia.UrlRewriter" />
+            </CallStack>
+          </Stacks>
+        </Method>
+        <Method Sig="string ResolveLocation(string )">
+          <Demand>
+            <PermissionSet version="1" class="System.Security.PermissionSet" Unrestricted="true" />
+          </Demand>
+          <Sandbox>
+            <PermissionSet version="1" class="System.Security.PermissionSet" Unrestricted="true" />
+          </Sandbox>
+          <Stacks>
+            <CallStack>
+              <PermissionSet version="1" class="System.Security.PermissionSet" Unrestricted="true" />
+              <Method Type="System.Web.HttpServerUtility" Sig="instance string MapPath(string )" Asm="System.Web" />
+              <Method Type="Intelligencia.UrlRewriter.Utilities.HttpContextFacade" Sig="instance string InternalMapPath(string )" Asm="Intelligencia.UrlRewriter" />
+              <Method Type="Intelligencia.UrlRewriter.Utilities.HttpContextFacade" Sig="instance void .ctor()" Asm="Intelligencia.UrlRewriter" />
+              <Method Type="Intelligencia.UrlRewriter.RewriterHttpModule" Sig="void .cctor()" Asm="Intelligencia.UrlRewriter" />
+              <Method Type="Intelligencia.UrlRewriter.RewriterHttpModule" Sig="string ResolveLocation(string )" Asm="Intelligencia.UrlRewriter" />
+            </CallStack>
+          </Stacks>
+        </Method>
+        <Method Sig="string get_OriginalQueryString()">
+          <Demand>
+            <PermissionSet version="1" class="System.Security.PermissionSet" Unrestricted="true" />
+          </Demand>
+          <Sandbox>
+            <PermissionSet version="1" class="System.Security.PermissionSet" Unrestricted="true" />
+          </Sandbox>
+          <Stacks>
+            <CallStack>
+              <PermissionSet version="1" class="System.Security.PermissionSet" Unrestricted="true" />
+              <Method Type="System.Web.HttpServerUtility" Sig="instance string MapPath(string )" Asm="System.Web" />
+              <Method Type="Intelligencia.UrlRewriter.Utilities.HttpContextFacade" Sig="instance string InternalMapPath(string )" Asm="Intelligencia.UrlRewriter" />
+              <Method Type="Intelligencia.UrlRewriter.Utilities.HttpContextFacade" Sig="instance void .ctor()" Asm="Intelligencia.UrlRewriter" />
+              <Method Type="Intelligencia.UrlRewriter.RewriterHttpModule" Sig="void .cctor()" Asm="Intelligencia.UrlRewriter" />
+              <Method Type="Intelligencia.UrlRewriter.RewriterHttpModule" Sig="string get_OriginalQueryString()" Asm="Intelligencia.UrlRewriter" />
+            </CallStack>
+          </Stacks>
+        </Method>
+        <Method Sig="void set_OriginalQueryString(string )">
+          <Demand>
+            <PermissionSet version="1" class="System.Security.PermissionSet" Unrestricted="true" />
+          </Demand>
+          <Sandbox>
+            <PermissionSet version="1" class="System.Security.PermissionSet" Unrestricted="true" />
+          </Sandbox>
+          <Stacks>
+            <CallStack>
+              <PermissionSet version="1" class="System.Security.PermissionSet" Unrestricted="true" />
+              <Method Type="System.Web.HttpServerUtility" Sig="instance string MapPath(string )" Asm="System.Web" />
+              <Method Type="Intelligencia.UrlRewriter.Utilities.HttpContextFacade" Sig="instance string InternalMapPath(string )" Asm="Intelligencia.UrlRewriter" />
+              <Method Type="Intelligencia.UrlRewriter.Utilities.HttpContextFacade" Sig="instance void .ctor()" Asm="Intelligencia.UrlRewriter" />
+              <Method Type="Intelligencia.UrlRewriter.RewriterHttpModule" Sig="void .cctor()" Asm="Intelligencia.UrlRewriter" />
+              <Method Type="Intelligencia.UrlRewriter.RewriterHttpModule" Sig="void set_OriginalQueryString(string )" Asm="Intelligencia.UrlRewriter" />
+            </CallStack>
+          </Stacks>
+        </Method>
+        <Method Sig="string get_QueryString()">
+          <Demand>
+            <PermissionSet version="1" class="System.Security.PermissionSet" Unrestricted="true" />
+          </Demand>
+          <Sandbox>
+            <PermissionSet version="1" class="System.Security.PermissionSet" Unrestricted="true" />
+          </Sandbox>
+          <Stacks>
+            <CallStack>
+              <PermissionSet version="1" class="System.Security.PermissionSet" Unrestricted="true" />
+              <Method Type="System.Web.HttpServerUtility" Sig="instance string MapPath(string )" Asm="System.Web" />
+              <Method Type="Intelligencia.UrlRewriter.Utilities.HttpContextFacade" Sig="instance string InternalMapPath(string )" Asm="Intelligencia.UrlRewriter" />
+              <Method Type="Intelligencia.UrlRewriter.Utilities.HttpContextFacade" Sig="instance void .ctor()" Asm="Intelligencia.UrlRewriter" />
+              <Method Type="Intelligencia.UrlRewriter.RewriterHttpModule" Sig="void .cctor()" Asm="Intelligencia.UrlRewriter" />
+              <Method Type="Intelligencia.UrlRewriter.RewriterHttpModule" Sig="string get_QueryString()" Asm="Intelligencia.UrlRewriter" />
+            </CallStack>
+          </Stacks>
+        </Method>
+        <Method Sig="void set_QueryString(string )">
+          <Demand>
+            <PermissionSet version="1" class="System.Security.PermissionSet" Unrestricted="true" />
+          </Demand>
+          <Sandbox>
+            <PermissionSet version="1" class="System.Security.PermissionSet" Unrestricted="true" />
+          </Sandbox>
+          <Stacks>
+            <CallStack>
+              <PermissionSet version="1" class="System.Security.PermissionSet" Unrestricted="true" />
+              <Method Type="System.Web.HttpServerUtility" Sig="instance string MapPath(string )" Asm="System.Web" />
+              <Method Type="Intelligencia.UrlRewriter.Utilities.HttpContextFacade" Sig="instance string InternalMapPath(string )" Asm="Intelligencia.UrlRewriter" />
+              <Method Type="Intelligencia.UrlRewriter.Utilities.HttpContextFacade" Sig="instance void .ctor()" Asm="Intelligencia.UrlRewriter" />
+              <Method Type="Intelligencia.UrlRewriter.RewriterHttpModule" Sig="void .cctor()" Asm="Intelligencia.UrlRewriter" />
+              <Method Type="Intelligencia.UrlRewriter.RewriterHttpModule" Sig="void set_QueryString(string )" Asm="Intelligencia.UrlRewriter" />
+            </CallStack>
+          </Stacks>
+        </Method>
+        <Method Sig="instance void .ctor()">
+          <Demand>
+            <PermissionSet version="1" class="System.Security.PermissionSet" Unrestricted="true" />
+          </Demand>
+          <Sandbox>
+            <PermissionSet version="1" class="System.Security.PermissionSet" Unrestricted="true" />
+          </Sandbox>
+          <Stacks>
+            <CallStack>
+              <PermissionSet version="1" class="System.Security.PermissionSet" Unrestricted="true" />
+              <Method Type="System.Web.HttpServerUtility" Sig="instance string MapPath(string )" Asm="System.Web" />
+              <Method Type="Intelligencia.UrlRewriter.Utilities.HttpContextFacade" Sig="instance string InternalMapPath(string )" Asm="Intelligencia.UrlRewriter" />
+              <Method Type="Intelligencia.UrlRewriter.Utilities.HttpContextFacade" Sig="instance void .ctor()" Asm="Intelligencia.UrlRewriter" />
+              <Method Type="Intelligencia.UrlRewriter.RewriterHttpModule" Sig="void .cctor()" Asm="Intelligencia.UrlRewriter" />
+              <Method Type="Intelligencia.UrlRewriter.RewriterHttpModule" Sig="instance void .ctor()" Asm="Intelligencia.UrlRewriter" />
+            </CallStack>
+          </Stacks>
+        </Method>
+        <Method Sig="void .cctor()">
+          <Demand>
+            <PermissionSet version="1" class="System.Security.PermissionSet" Unrestricted="true" />
+          </Demand>
+          <Sandbox>
+            <PermissionSet version="1" class="System.Security.PermissionSet" Unrestricted="true" />
+          </Sandbox>
+        </Method>
+      </Type>
+      <Namespace Name="Logging">
+        <Type Name="NullLogger">
+          <Method Sig="instance void Debug(object )" />
+          <Method Sig="instance void Info(object )" />
+          <Method Sig="instance void Warn(object )" />
+          <Method Sig="instance void Error(object )" />
+          <Method Sig="instance void Error(object , class Exception )" />
+          <Method Sig="instance void Fatal(object , class Exception )" />
+          <Method Sig="instance void .ctor()" />
+        </Type>
+        <Type Name="DebugLogger">
+          <Method Sig="instance void Debug(object )" />
+          <Method Sig="instance void Info(object )" />
+          <Method Sig="instance void Warn(object )" />
+          <Method Sig="instance void Error(object )" />
+          <Method Sig="instance void Error(object , class Exception )" />
+          <Method Sig="instance void Fatal(object , class Exception )" />
+          <Method Sig="instance void .ctor()" />
+        </Type>
+      </Namespace>
+      <Namespace Name="Errors">
+        <Type Name="DefaultErrorHandler">
+          <Method Sig="instance void .ctor(string )" />
+          <Method Sig="instance void HandleError(class HttpContext )">
+            <Demand>
+              <PermissionSet version="1" class="System.Security.PermissionSet" Unrestricted="true" />
+            </Demand>
+            <Sandbox>
+              <PermissionSet version="1" class="System.Security.PermissionSet" Unrestricted="true" />
+            </Sandbox>
+            <Stacks>
+              <CallStack>
+                <PermissionSet version="1" class="System.Security.PermissionSet" Unrestricted="true" />
+                <Method Type="System.Web.HttpServerUtility" Sig="instance void Execute(string )" Asm="System.Web" />
+                <Method Type="Intelligencia.UrlRewriter.Errors.DefaultErrorHandler" Sig="instance void HandleError(class HttpContext )" Asm="Intelligencia.UrlRewriter" />
+              </CallStack>
+            </Stacks>
+          </Method>
+        </Type>
+      </Namespace>
+      <Type Name="RewriterEngine">
+        <Method Sig="instance void .ctor(class IContextFacade , class RewriterConfiguration )" />
+        <Method Sig="instance string ResolveLocation(string )" />
+        <Method Sig="instance void Rewrite()">
+          <Demand>
+            <PermissionSet version="1" class="System.Security.PermissionSet" Unrestricted="true" />
+          </Demand>
+          <Sandbox>
+            <PermissionSet version="1" class="System.Security.PermissionSet" Unrestricted="true" />
+          </Sandbox>
+          <Stacks>
+            <CallStack>
+              <IPermission version="1" class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" PathDiscovery="*AllFiles*" />
+              <Method Type="System.Web.HttpCookieCollection" Sig="instance class HttpCookie get_Item(string )" Asm="System.Web" />
+              <Method Type="Intelligencia.UrlRewriter.RewriteContext" Sig="instance void .ctor(class RewriterEngine , string , string , class MapPathDelegate , class NameValueCollection , class NameValueCollection , class HttpCookieCollection )" Asm="Intelligencia.UrlRewriter" />
+              <Method Type="Intelligencia.UrlRewriter.RewriterEngine" Sig="instance void Rewrite()" Asm="Intelligencia.UrlRewriter" />
+            </CallStack>
+            <CallStack>
+              <PermissionSet version="1" class="System.Security.PermissionSet" Unrestricted="true" />
+              <Method Type="System.Web.Caching.Cache" Sig="instance object Add(string , object , class CacheDependency , struct DateTime , struct TimeSpan , struct CacheItemPriority , class CacheItemRemovedCallback )" Asm="System.Web" />
+              <Method Type="Intelligencia.UrlRewriter.Configuration.RewriterConfiguration" Sig="class RewriterConfiguration Load()" Asm="Intelligencia.UrlRewriter" />
+              <Method Type="Intelligencia.UrlRewriter.Configuration.RewriterConfiguration" Sig="class RewriterConfiguration get_Current()" Asm="Intelligencia.UrlRewriter" />
+              <Method Type="Intelligencia.UrlRewriter.RewriterEngine" Sig="instance bool HandleDefaultDocument(class RewriteContext )" Asm="Intelligencia.UrlRewriter" />
+              <Method Type="Intelligencia.UrlRewriter.RewriterEngine" Sig="instance void VerifyResultExists(class RewriteContext )" Asm="Intelligencia.UrlRewriter" />
+              <Method Type="Intelligencia.UrlRewriter.RewriterEngine" Sig="instance void Rewrite()" Asm="Intelligencia.UrlRewriter" />
+            </CallStack>
+          </Stacks>
+        </Method>
+        <Method Sig="instance string Expand(class RewriteContext , string )">
+          <Demand>
+            <PermissionSet version="1" class="System.Security.PermissionSet">
+              <IPermission version="1" class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="ControlEvidence" />
+            </PermissionSet>
+          </Demand>
+          <Sandbox>
+            <PermissionSet version="1" class="System.Security.PermissionSet">
+              <IPermission version="1" class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="ControlEvidence" />
+            </PermissionSet>
+          </Sandbox>
+        </Method>
+        <Method Sig="instance string get_OriginalQueryString()" />
+        <Method Sig="instance void set_OriginalQueryString(string )" />
+        <Method Sig="instance string get_QueryString()" />
+        <Method Sig="instance void set_QueryString(string )" />
+      </Type>
+      <Type Name="RewriteContext">
+        <Method Sig="instance string MapPath(string )" />
+        <Method Sig="instance string get_Location()" />
+        <Method Sig="instance void set_Location(string )" />
+        <Method Sig="instance string get_Method()" />
+        <Method Sig="instance class NameValueCollection get_Properties()" />
+        <Method Sig="instance class NameValueCollection get_Headers()" />
+        <Method Sig="instance struct HttpStatusCode get_StatusCode()" />
+        <Method Sig="instance void set_StatusCode(struct HttpStatusCode )" />
+        <Method Sig="instance class HttpCookieCollection get_Cookies()" />
+        <Method Sig="instance class Match get_LastMatch()" />
+        <Method Sig="instance void set_LastMatch(class Match )" />
+        <Method Sig="instance string Expand(string )">
+          <Demand>
+            <PermissionSet version="1" class="System.Security.PermissionSet">
+              <IPermission version="1" class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="ControlEvidence" />
+            </PermissionSet>
+          </Demand>
+          <Sandbox>
+            <PermissionSet version="1" class="System.Security.PermissionSet">
+              <IPermission version="1" class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="ControlEvidence" />
+            </PermissionSet>
+          </Sandbox>
+        </Method>
+        <Method Sig="instance string ResolveLocation(string )" />
+      </Type>
+    </Namespace>
+  </Namespace>
+</Assembly>

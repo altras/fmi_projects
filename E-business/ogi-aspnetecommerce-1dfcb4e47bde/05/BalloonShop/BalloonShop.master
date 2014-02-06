@@ -1,0 +1,39 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="BalloonShop.master.cs" Inherits="BalloonShop" %>
+
+<%@ Register src="UserControls/DepartmentsList.ascx" tagname="DepartmentsList" tagprefix="uc1" %>
+
+<%@ Register src="UserControls/CategoriesList.ascx" tagname="CategoriesList" tagprefix="uc2" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+  <title>BalloonShop: Online Store Demo</title>
+  <asp:ContentPlaceHolder id="head" runat="server">
+  </asp:ContentPlaceHolder>
+</head>
+<body>
+  <form id="form1" runat="server">
+    <div class="Window">
+      <div class="Main">
+        <div class="Left">
+          <div class="Container">
+            &nbsp;<uc1:DepartmentsList ID="DepartmentsList1" runat="server" />
+              <uc2:CategoriesList ID="CategoriesList1" runat="server" />
+          </div>
+        </div>
+        <div class="Right">
+          <div class="Header">
+            <asp:HyperLink ID="HeaderLink" ImageUrl="~/Images/BalloonShopLogo.png" 
+         NavigateUrl="~/" runat="server" ToolTip="BalloonShop Logo" />  
+          </div>
+          <div class="Contents">           
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+          </div>     
+        </div>
+      </div>
+    </div>
+  </form>
+</body>
+</html>
