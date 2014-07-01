@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<computerConfiguration xmlns="http://tempuri.org/XmlShema.xsd">
+  <monitor producer="Acer">
+    <aspectRatio>
+      <height>2048</height>
+      <width>1536</width>
+    </aspectRatio>
+    <materials>
+      <stand>алуминий</stand>
+      <display>стъкло,кристали,алуминий</display>
+    </materials>
+    <matrix producer="Acer">
+      <name>Active матрица</name>
+    </matrix>
+    <LED>да</LED>
+    <name>Acer 2345XTD LED</name>
+  </monitor>
+  <boxSet>
+    <CPU producer="Интел">
+      <name>Интел Core™ i7 процесор Extreme Издание</name>
+    </CPU>
+    <motherBoard>Интел® Desktop Board D425KT</motherBoard>
+    <RAM>8ГБ</RAM>
+    <videoCard producer="Nvidia">
+      <name>Geforce GTX 690</name>
+    </videoCard>
+    <coolingSystem>Lamptron 30W - 4 </coolingSystem>
+    <soundCard>Creative Sound Blaster Recon3D</soundCard>
+    <powerSupply>OCZ ZT SERIES 550W</powerSupply>
+    <expansionCards>TR-12467FX</expansionCards>
+    <HDD producer="Уестърн Диджитал">
+      <name>WD Caviar Green</name>
+    </HDD>
+    <removableМediaDevices>
+      <USBFlashDrive>DataTraveler SE15</USBFlashDrive>
+      <opticalDisc>ДВД/СД</opticalDisc>
+      <memoryCardReader>IOGEAR USB Smart Card Access Reader, Модел: GPFR256</memoryCardReader>
+    </removableМediaDevices>
+    <box>Benny Venus</box>
+  </boxSet>
+  <peripherals>
+    <mouse producer="Стийл Сирийс">
+      <name>Сенсей</name>
+    </mouse>
+    <keyboard producer="Рейзър">
+      <name>Черна Вдовица</name>
+    </keyboard>
+    <otherDevices>няма</otherDevices>
+    <videoCamera>6 LED 20 Мега пиксела</videoCamera>
+    <microphone>стандартен</microphone>
+    <headPhones producer="Стийл Сирийс">
+      <name>Златно Издание</name>
+    </headPhones>
+  </peripherals>
+  <additionalSoftware>
+    <OS producer="Микрософт">
+      <name>Уиндоус 7</name>
+    </OS>
+    <antiVirus producer="Есет">
+      <name>Нод32 6</name>
+    </antiVirus>
+    <games>
+      <game1 producer="Близард">
+        <name>Рейман Ориджинс</name>
+      </game1>
+      <game2 producer="Близард">
+        <name>Стар Крафт 2</name>
+      </game2>
+      <game3 producer="ЕА">
+        <name>Ъндърковер</name>
+      </game3>
+    </games>
+    <other producer="няма">
+      <name>няма</name>
+    </other>
+  </additionalSoftware>
+</computerConfiguration>

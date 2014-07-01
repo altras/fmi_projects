@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<computerConfiguration xmlns="http://tempuri.org/XmlShema.xsd">
+  <monitor producer="LG">
+    <aspectRatio>
+      <height>1280</height>
+      <width>960</width>
+    </aspectRatio>
+    <materials>
+      <stand>метал,пластмаса</stand>
+      <display>стъкло,кристали,алуминий</display>
+    </materials>
+    <matrix producer="LG">
+      <name>19” LG LCD Matrix PSDT1525</name>
+    </matrix>
+    <LED>не</LED>
+    <name>не</name>
+  </monitor>
+  <boxSet>
+    <CPU producer="Интел">
+      <name>Интел Core™ i7-2600</name>
+    </CPU>
+    <motherBoard>Интел ADX234OD motherboard</motherBoard>
+    <RAM>8ГБ</RAM>
+    <videoCard producer="Nvidia">
+      <name>GeForce GTX 690</name>
+    </videoCard>
+    <coolingSystem>Phobya 140mm x 25mm G-Silent 14 Blue LED - 1100 RPM 79117</coolingSystem>
+    <soundCard>Creative Sound Blaster Recon3D</soundCard>
+    <powerSupply>Silencer 610 EPS12V</powerSupply>
+    <expansionCards>Belkin 802.11g Wireless G</expansionCards>
+    <HDD producer="Уестърн Дигитал">
+      <name>Уестърн Дигитал Scorpio Blue 1TB</name>
+    </HDD>
+    <removableМediaDevices>
+      <USBFlashDrive>USBFlashDrive1</USBFlashDrive>
+      <opticalDisc>СД</opticalDisc>
+      <memoryCardReader>memoryCardReader15675</memoryCardReader>
+    </removableМediaDevices>
+    <box>MonsterBox930623</box>
+  </boxSet>
+  <peripherals>
+    <mouse producer="Logitech">
+      <name>XQ5</name>
+    </mouse>
+    <keyboard producer="Logitech">
+      <name>ProX</name>
+    </keyboard>
+    <otherDevices>няма</otherDevices>
+    <videoCamera>стандартна</videoCamera>
+    <microphone>MC-5</microphone>
+    <headPhones producer="Рейзър">
+      <name>Razer Tiamat 7.1</name>
+    </headPhones>
+  </peripherals>
+  <additionalSoftware>
+    <OS producer="Микрософт">
+      <name>Уиндоус 7</name>
+    </OS>
+    <antiVirus producer="няма">
+      <name>няма</name>
+    </antiVirus>
+    <games>
+      <game1 producer="Юбисофт">
+        <name>Рейман Ориджинс</name>
+      </game1>
+      <game2 producer="Близард">
+        <name>Стар Крафт 2</name>
+      </game2>
+      <game3 producer="ЕА">
+        <name>Ъндърковер</name>
+      </game3>
+    </games>
+    <other producer="няма">
+      <name>няма</name>
+    </other>
+  </additionalSoftware>
+</computerConfiguration>

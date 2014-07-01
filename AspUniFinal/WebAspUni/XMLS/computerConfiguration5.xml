@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<computerConfiguration xmlns="http://tempuri.org/XmlShema.xsd">
+  <monitor producer="Acer">
+    <aspectRatio>
+      <height>1024</height>
+      <width>768</width>
+    </aspectRatio>
+    <materials>
+      <stand>метал</stand>
+      <display>стъкло,кристали,метал</display>
+    </materials>
+    <matrix producer="Dell">
+      <name>AGI-TxD40 матрица</name>
+    </matrix>
+    <LED>няма</LED>
+    <name>няма</name>
+  </monitor>
+  <boxSet>
+    <CPU producer="Интел">
+      <name>Интел Core™ i7-2600</name>
+    </CPU>
+    <motherBoard>Интел ADX234OD motherboard</motherBoard>
+    <RAM>8ГБ</RAM>
+    <videoCard producer="Nvidia">
+      <name>GeForce GTX 690</name>
+    </videoCard>
+    <coolingSystem>SilenX Effizio Silent Thermistor Edition 120mm Computer Case Fan EFX-12-15T</coolingSystem>
+    <soundCard> ASUS EAH5770s</soundCard>
+    <powerSupply>AHGI-HGTY-Z8593</powerSupply>
+    <expansionCards>ASUS NX1101 32-Bit 10/100/1000Mbps Ethernet PCI Adapter </expansionCards>
+    <HDD producer="ADATA">
+      <name>Adata 2.5 320gb Ch94</name>
+    </HDD>
+    <removableМediaDevices>
+      <USBFlashDrive>7-Port USB 2.0 Hub</USBFlashDrive>
+      <opticalDisc>ДВД/СД записвачка</opticalDisc>
+      <memoryCardReader>ExpressCard 34 to PCMCIA PC CardBus </memoryCardReader>
+    </removableМediaDevices>
+    <box>MonsterBox930623</box>
+  </boxSet>
+  <peripherals>
+    <mouse producer="Логитех">
+      <name>АQ039DF</name>
+    </mouse>
+    <keyboard producer="Логитех">
+      <name>90TJXAF</name>
+    </keyboard>
+    <otherDevices>няма</otherDevices>
+    <videoCamera>няма</videoCamera>
+    <microphone>няма</microphone>
+    <headPhones producer="няма">
+      <name>няма</name>
+    </headPhones>
+  </peripherals>
+  <additionalSoftware>
+    <OS producer="Микрософт">
+      <name>Уиндоус 7</name>
+    </OS>
+    <antiVirus producer="няма">
+      <name>няма</name>
+    </antiVirus>
+    <games>
+      <game1 producer="Юбисофт">
+        <name>Рейман Ориджинс</name>
+      </game1>
+      <game2 producer="Близард">
+        <name>Стар Крафт 2</name>
+      </game2>
+      <game3 producer="ЕА">
+        <name>Ъндърковер</name>
+      </game3>
+    </games>
+    <other producer="няма">
+      <name>няма</name>
+    </other>
+  </additionalSoftware>
+</computerConfiguration>

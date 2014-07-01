@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<computerConfiguration xmlns="http://tempuri.org/XmlShema.xsd">
+  <monitor producer="producer1">
+    <aspectRatio>
+      <height>2048</height>
+      <width>1536</width>
+    </aspectRatio>
+    <materials>
+      <stand>алуминий</stand>
+      <display>стъкло,кристали,алуминий</display>
+    </materials>
+    <matrix producer="Acer">
+      <name>Active матрица</name>
+    </matrix>
+    <LED>да</LED>
+    <name>Филипс 236V3LSB LED</name>
+  </monitor>
+  <boxSet>
+    <CPU producer="AMD">
+      <name>FX 4-Ядрен Черна Серия</name>
+    </CPU>
+    <motherBoard>A55F-M2</motherBoard>
+    <RAM>8ГБ</RAM>
+    <videoCard producer="ATI">
+      <name>X1900XTX</name>
+    </videoCard>
+    <coolingSystem>Sunbeam 80mm x 25mm Quad LED Fan - Blue SLF-08-B</coolingSystem>
+    <soundCard>SteelSeries SIBERIA</soundCard>
+    <powerSupply>powerSupply1</powerSupply>
+    <expansionCards>Intel® PRO/1000 GT</expansionCards>
+    <HDD producer="producer1">
+      <name>name1</name>
+    </HDD>
+    <removableМediaDevices>
+      <USBFlashDrive>МегаUSBFlashDrive3000</USBFlashDrive>
+      <opticalDisc>ДВД/СД</opticalDisc>
+      <memoryCardReader>PCI Bus PCMCIA PC Card Reader</memoryCardReader>
+    </removableМediaDevices>
+    <box>Lian Li V1200</box>
+  </boxSet>
+  <peripherals>
+    <mouse producer="Логитех">
+      <name>АQ039DF</name>
+    </mouse>
+    <keyboard producer="Логитех">
+      <name>90TJXAF</name>
+    </keyboard>
+    <otherDevices>няма</otherDevices>
+    <videoCamera>няма</videoCamera>
+    <microphone>няма</microphone>
+    <headPhones producer="няма">
+      <name>няма</name>
+    </headPhones>
+  </peripherals>
+  <additionalSoftware>
+    <OS producer="Микрософт">
+      <name>Уиндоус 7</name>
+    </OS>
+     <antiVirus producer="Есет">
+      <name>Нод32 5</name>
+    </antiVirus>
+    <games>
+      <game1 producer="Юбисофт">
+        <name>Рейман Ориджинс</name>
+      </game1>
+      <game2 producer="Близард">
+        <name>Стар Крафт 2</name>
+      </game2>
+      <game3 producer="ЕА">
+        <name>Ъндърковер</name>
+      </game3>
+    </games>
+    <other producer="няма">
+      <name>няма</name>
+    </other>
+  </additionalSoftware>
+</computerConfiguration>

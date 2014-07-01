@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CustomComputersAspModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="CustomComputersAspEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="BoxSets" EntityType="CustomComputersAspModel.BoxSet" />
+    <EntitySet Name="Configurations" EntityType="CustomComputersAspModel.Configuration" />
+    <EntitySet Name="Cpus" EntityType="CustomComputersAspModel.Cpu" />
+    <EntitySet Name="Hdds" EntityType="CustomComputersAspModel.Hdd" />
+    <EntitySet Name="Materials" EntityType="CustomComputersAspModel.Material" />
+    <EntitySet Name="Monitors" EntityType="CustomComputersAspModel.Monitor" />
+    <EntitySet Name="Peripherals" EntityType="CustomComputersAspModel.Peripheral" />
+    <EntitySet Name="Softwares" EntityType="CustomComputersAspModel.Software" />
+    <EntitySet Name="VideoCards" EntityType="CustomComputersAspModel.VideoCard" />
+    <AssociationSet Name="FK_BoxSet_Cpu" Association="CustomComputersAspModel.FK_BoxSet_Cpu">
+      <End Role="Cpu" EntitySet="Cpus" />
+      <End Role="BoxSet" EntitySet="BoxSets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BoxSet_Hdd" Association="CustomComputersAspModel.FK_BoxSet_Hdd">
+      <End Role="Hdd" EntitySet="Hdds" />
+      <End Role="BoxSet" EntitySet="BoxSets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BoxSet_VideoCard" Association="CustomComputersAspModel.FK_BoxSet_VideoCard">
+      <End Role="VideoCard" EntitySet="VideoCards" />
+      <End Role="BoxSet" EntitySet="BoxSets" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Configuration_BoxSet" Association="CustomComputersAspModel.FK_Configuration_BoxSet">
+      <End Role="BoxSet" EntitySet="BoxSets" />
+      <End Role="Configuration" EntitySet="Configurations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Configuration_Monitor" Association="CustomComputersAspModel.FK_Configuration_Monitor">
+      <End Role="Monitor" EntitySet="Monitors" />
+      <End Role="Configuration" EntitySet="Configurations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Peripherals_Configuration" Association="CustomComputersAspModel.FK_Peripherals_Configuration">
+      <End Role="Configuration" EntitySet="Configurations" />
+      <End Role="Peripherals" EntitySet="Peripherals" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Software_Configuration" Association="CustomComputersAspModel.FK_Software_Configuration">
+      <End Role="Configuration" EntitySet="Configurations" />
+      <End Role="Software" EntitySet="Softwares" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Monitor_Materials1" Association="CustomComputersAspModel.FK_Monitor_Materials1">
+      <End Role="Materials" EntitySet="Materials" />
+      <End Role="Monitor" EntitySet="Monitors" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="BoxSet">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cupId" Type="Int32" Nullable="false" />
+    <Property Name="motherboard" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="ram" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="videoCardId" Type="Int32" Nullable="false" />
+    <Property Name="coolingSystem" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="powerSupply" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="expansionCards" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="hddId" Type="Int32" Nullable="false" />
+    <Property Name="removableDevices" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="box" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Cpu" Relationship="CustomComputersAspModel.FK_BoxSet_Cpu" FromRole="BoxSet" ToRole="Cpu" />
+    <NavigationProperty Name="Hdd" Relationship="CustomComputersAspModel.FK_BoxSet_Hdd" FromRole="BoxSet" ToRole="Hdd" />
+    <NavigationProperty Name="VideoCard" Relationship="CustomComputersAspModel.FK_BoxSet_VideoCard" FromRole="BoxSet" ToRole="VideoCard" />
+    <NavigationProperty Name="Configurations" Relationship="CustomComputersAspModel.FK_Configuration_BoxSet" FromRole="BoxSet" ToRole="Configuration" />
+  </EntityType>
+  <EntityType Name="Configuration">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="boxId" Type="Int32" Nullable="false" />
+    <Property Name="monitorId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="BoxSet" Relationship="CustomComputersAspModel.FK_Configuration_BoxSet" FromRole="Configuration" ToRole="BoxSet" />
+    <NavigationProperty Name="Monitor" Relationship="CustomComputersAspModel.FK_Configuration_Monitor" FromRole="Configuration" ToRole="Monitor" />
+    <NavigationProperty Name="Peripherals" Relationship="CustomComputersAspModel.FK_Peripherals_Configuration" FromRole="Configuration" ToRole="Peripherals" />
+    <NavigationProperty Name="Softwares" Relationship="CustomComputersAspModel.FK_Software_Configuration" FromRole="Configuration" ToRole="Software" />
+  </EntityType>
+  <EntityType Name="Cpu">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="producer" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="BoxSets" Relationship="CustomComputersAspModel.FK_BoxSet_Cpu" FromRole="Cpu" ToRole="BoxSet" />
+  </EntityType>
+  <EntityType Name="Hdd">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="producer" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="BoxSets" Relationship="CustomComputersAspModel.FK_BoxSet_Hdd" FromRole="Hdd" ToRole="BoxSet" />
+  </EntityType>
+  <EntityType Name="Material">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="stand" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="display" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Monitors" Relationship="CustomComputersAspModel.FK_Monitor_Materials1" FromRole="Materials" ToRole="Monitor" />
+  </EntityType>
+  <EntityType Name="Monitor">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="materialsId" Type="Int32" Nullable="false" />
+    <Property Name="matrix" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="aspectRatio" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="led" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="producer" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Configurations" Relationship="CustomComputersAspModel.FK_Configuration_Monitor" FromRole="Monitor" ToRole="Configuration" />
+    <NavigationProperty Name="Material" Relationship="CustomComputersAspModel.FK_Monitor_Materials1" FromRole="Monitor" ToRole="Materials" />
+  </EntityType>
+  <EntityType Name="Peripheral">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="type" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="producer" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="configId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Configuration" Relationship="CustomComputersAspModel.FK_Peripherals_Configuration" FromRole="Peripherals" ToRole="Configuration" />
+  </EntityType>
+  <EntityType Name="Software">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="producer" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="type" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="configId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Configuration" Relationship="CustomComputersAspModel.FK_Software_Configuration" FromRole="Software" ToRole="Configuration" />
+  </EntityType>
+  <EntityType Name="VideoCard">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="producer" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="BoxSets" Relationship="CustomComputersAspModel.FK_BoxSet_VideoCard" FromRole="VideoCard" ToRole="BoxSet" />
+  </EntityType>
+  <Association Name="FK_BoxSet_Cpu">
+    <End Role="Cpu" Type="CustomComputersAspModel.Cpu" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="BoxSet" Type="CustomComputersAspModel.BoxSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cpu">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="BoxSet">
+        <PropertyRef Name="cupId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BoxSet_Hdd">
+    <End Role="Hdd" Type="CustomComputersAspModel.Hdd" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="BoxSet" Type="CustomComputersAspModel.BoxSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hdd">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="BoxSet">
+        <PropertyRef Name="hddId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BoxSet_VideoCard">
+    <End Role="VideoCard" Type="CustomComputersAspModel.VideoCard" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="BoxSet" Type="CustomComputersAspModel.BoxSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VideoCard">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="BoxSet">
+        <PropertyRef Name="videoCardId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Configuration_BoxSet">
+    <End Role="BoxSet" Type="CustomComputersAspModel.BoxSet" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Configuration" Type="CustomComputersAspModel.Configuration" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BoxSet">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Configuration">
+        <PropertyRef Name="boxId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Configuration_Monitor">
+    <End Role="Monitor" Type="CustomComputersAspModel.Monitor" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Configuration" Type="CustomComputersAspModel.Configuration" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Monitor">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Configuration">
+        <PropertyRef Name="monitorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Peripherals_Configuration">
+    <End Role="Configuration" Type="CustomComputersAspModel.Configuration" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Peripherals" Type="CustomComputersAspModel.Peripheral" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Configuration">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Peripherals">
+        <PropertyRef Name="configId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Software_Configuration">
+    <End Role="Configuration" Type="CustomComputersAspModel.Configuration" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Software" Type="CustomComputersAspModel.Software" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Configuration">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Software">
+        <PropertyRef Name="configId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Monitor_Materials1">
+    <End Role="Materials" Type="CustomComputersAspModel.Material" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Monitor" Type="CustomComputersAspModel.Monitor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Materials">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Monitor">
+        <PropertyRef Name="materialsId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

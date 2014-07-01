@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<computerConfiguration xmlns="http://tempuri.org/XmlShema.xsd">
+  <monitor producer="Sony">
+    <aspectRatio>
+      <height>1920</height>
+      <width>1200</width>
+    </aspectRatio>
+    <materials>
+      <stand>пластмаса</stand>
+      <display>стъкло,кристали,пластмаса</display>
+    </materials>
+    <matrix producer="Acer">
+      <name>LCD дисплей / TFT актив матрица</name>
+    </matrix>
+    <LED>няма</LED>
+    <name>няма</name>
+  </monitor>
+  <boxSet>
+    <CPU producer="Интел">
+      <name>Интел Core i7-3770K</name>
+    </CPU>
+    <motherBoard>Гигабайт G1.Sniper 3 Z77</motherBoard>
+    <RAM>4ГБ</RAM>
+    <videoCard producer="Nvidia">
+      <name>GeForce GTX 690</name>
+    </videoCard>
+    <coolingSystem>Phobya 140mm x 25mm G-Silent 14 Blue LED - 1100 RPM 79117</coolingSystem>
+    <soundCard>Creative Sound Blaster Recon3D</soundCard>
+    <powerSupply>Silencer 610 EPS12V</powerSupply>
+    <expansionCards>TP-link TG-3468 лан карта</expansionCards>
+    <HDD producer="Сийгейт">
+      <name>Seagate FreeAgent GoFlex Desk</name>
+    </HDD>
+    <removableМediaDevices>
+      <USBFlashDrive>Targus Desktop 7-Port USB 2.0 Hub</USBFlashDrive>
+      <opticalDisc>Самсунг 22X DVD записвачка</opticalDisc>
+      <memoryCardReader>СанДиск Всичко-в-едно USB 2.0 картов четец</memoryCardReader>
+    </removableМediaDevices>
+    <box>WishKT43</box>
+  </boxSet>
+  <peripherals>
+    <mouse producer="Рейзър">
+      <name>Razer Naga</name>
+    </mouse>
+    <keyboard producer="Logitech">
+      <name>ProX</name>
+    </keyboard>
+    <otherDevices>няма</otherDevices>
+    <videoCamera>няма</videoCamera>
+    <microphone>няма</microphone>
+    <headPhones producer="Аудио-Техника">
+      <name>Audio-Technica ATH-M50 Closed Back Слушалки</name>
+    </headPhones>
+  </peripherals>
+  <additionalSoftware>
+    <OS producer="Микрософт">
+      <name>Уиндоус 7</name>
+    </OS>
+    <antiVirus producer="няма">
+      <name>няма</name>
+    </antiVirus>
+    <games>
+      <game1 producer="няма">
+        <name>няма</name>
+      </game1>
+      <game2 producer="няма">
+        <name>няма</name>
+      </game2>
+      <game3 producer="няма">
+        <name>няма</name>
+      </game3>
+    </games>
+    <other producer="няма">
+      <name>няма</name>
+    </other>
+  </additionalSoftware>
+</computerConfiguration>

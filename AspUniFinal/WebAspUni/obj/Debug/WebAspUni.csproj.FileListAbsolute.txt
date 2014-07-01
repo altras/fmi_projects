@@ -1,0 +1,16 @@
+c:\users\putzmitt3l\documents\visual studio 2010\Projects\AspUniFinal\WebAspUni\obj\Debug\ResolveAssemblyReference.cache
+c:\users\putzmitt3l\documents\visual studio 2010\Projects\AspUniFinal\WebAspUni\bin\WebAspUni.dll
+c:\users\putzmitt3l\documents\visual studio 2010\Projects\AspUniFinal\WebAspUni\bin\WebAspUni.pdb
+c:\users\putzmitt3l\documents\visual studio 2010\Projects\AspUniFinal\WebAspUni\obj\Debug\WebAspUni.dll
+c:\users\putzmitt3l\documents\visual studio 2010\Projects\AspUniFinal\WebAspUni\obj\Debug\WebAspUni.pdb
+C:\Users\Dobata\Desktop\AspUniFinal\WebAspUni\bin\WebAspUni.dll
+C:\Users\Dobata\Desktop\AspUniFinal\WebAspUni\bin\WebAspUni.pdb
+C:\Users\Dobata\Desktop\AspUniFinal\WebAspUni\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Dobata\Desktop\AspUniFinal\WebAspUni\obj\Debug\WebAspUni.dll
+C:\Users\Dobata\Desktop\AspUniFinal\WebAspUni\obj\Debug\WebAspUni.pdb
+D:\_dev\fmi\AspUniFinal\WebAspUni\bin\WebAspUni.dll.config
+D:\_dev\fmi\AspUniFinal\WebAspUni\bin\WebAspUni.dll
+D:\_dev\fmi\AspUniFinal\WebAspUni\bin\WebAspUni.pdb
+D:\_dev\fmi\AspUniFinal\WebAspUni\obj\Debug\WebAspUni.csprojResolveAssemblyReference.cache
+D:\_dev\fmi\AspUniFinal\WebAspUni\obj\Debug\WebAspUni.dll
+D:\_dev\fmi\AspUniFinal\WebAspUni\obj\Debug\WebAspUni.pdb

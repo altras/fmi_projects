@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<computerConfiguration xmlns="http://tempuri.org/XmlShema.xsd">
+  <monitor producer="test">
+    <aspectRatio>
+      <height>333</height>
+      <width>444</width>
+    </aspectRatio>
+    <materials>
+      <stand>test</stand>
+      <display>test</display>
+    </materials>
+    <matrix producer="test">
+      <name>test</name>
+    </matrix>
+    <LED>yes</LED>
+    <name>test</name>
+  </monitor>
+  <boxSet>
+    <CPU producer="test">
+      <name>test</name>
+    </CPU>
+    <motherBoard>test</motherBoard>
+    <RAM>3</RAM>
+    <videoCard producer="test">
+      <name>test</name>
+    </videoCard>
+    <coolingSystem>test</coolingSystem>
+    <soundCard>test</soundCard>
+    <powerSupply>test</powerSupply>
+    <expansionCards>test</expansionCards>
+    <HDD producer="test">
+      <name>test</name>
+    </HDD>
+    <removableМediaDevices>
+      <USBFlashDrive>test</USBFlashDrive>
+      <opticalDisc>test</opticalDisc>
+      <memoryCardReader>test</memoryCardReader>
+    </removableМediaDevices>
+    <box>test</box>
+  </boxSet>
+  <peripherals>
+    <mouse producer="test">
+      <name>test</name>
+    </mouse>
+    <keyboard producer="test">
+      <name>test</name>
+    </keyboard>
+    <otherDevices>test</otherDevices>
+    <videoCamera>test</videoCamera>
+    <microphone>test</microphone>
+    <headPhones producer="test">
+      <name>test</name>
+    </headPhones>
+  </peripherals>
+  <additionalSoftware>
+    <OS producer="test">
+      <name>test</name>
+    </OS>
+    <antiVirus producer="test">
+      <name>test</name>
+    </antiVirus>
+    <games>
+      <game1 producer="test">
+        <name>test</name>
+      </game1>
+      <game2 producer="test">
+        <name>test</name>
+      </game2>
+      <game3 producer="test">
+        <name>test</name>
+      </game3>
+    </games>
+    <other producer="test">
+      <name>test</name>
+    </other>
+  </additionalSoftware>
+</computerConfiguration>
