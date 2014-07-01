@@ -1,0 +1,46 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="HotelShop.master.cs"
+    Inherits="BalloonShop" %>
+
+<%@ Register Src="UserControls/DepartmentsList.ascx" TagName="DepartmentsList" TagPrefix="uc1" %>
+<%@ Register Src="UserControls/CategoriesList.ascx" TagName="CategoriesList" TagPrefix="uc2" %>
+<%@ Register Src="UserControls/SearchBox.ascx" TagName="SearchBox" TagPrefix="uc3" %>
+<%@ Register Src="UserControls/UserInfo.ascx" TagName="UserInfo" TagPrefix="uc4" %>
+<%@ Register Src="UserControls/CartSummary.ascx" TagName="CartSummary" TagPrefix="uc5" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Хотелски услуги</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="Window">
+        <div class="Main">
+            <div class="Left">
+                <div class="Container">
+                    <uc4:UserInfo ID="UserInfo1" runat="server" />
+                    <uc3:SearchBox ID="SearchBox1" runat="server" />
+                    <uc1:DepartmentsList ID="DepartmentsList1" runat="server" />
+                    <uc2:CategoriesList ID="CategoriesList1" runat="server" />
+                    <uc5:CartSummary ID="CartSummary1" runat="server" />
+                </div>
+            </div>
+            <div class="Right">
+                <div class="Header">
+                    <h1>Хотелски Услуги</h1>
+                    <%--<asp:HyperLink ID="HeaderLink" NavigateUrl="~/" ToolTip="Хотелски услуги лого"
+                        runat="server">
+          <asp:image imageurl="~/Images/BalloonShopLogo.png" runat="server" AlternateText="Хотелски услуги лого" />--%>
+                    </asp:HyperLink>
+                </div>
+                <div class="Contents">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

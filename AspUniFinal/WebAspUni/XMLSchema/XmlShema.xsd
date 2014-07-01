@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="XmlShema"
+    targetNamespace="http://tempuri.org/XmlShema.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://tempuri.org/XmlShema.xsd"
+    xmlns:mstns="http://tempuri.org/XmlShema.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+  <xs:element name="computerConfiguration">
+    <xs:complexType>
+      <xs:sequence>
+
+        <xs:element name="monitor">
+          <xs:complexType>
+            <xs:sequence>
+
+              <xs:element name="aspectRatio">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="height" type="xs:int"/>
+                    <xs:element name="width" type="xs:int"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+
+              <xs:element name="materials">
+                <xs:complexType>
+                  <xs:sequence>
+
+                    <xs:element name="stand" type="xs:string"/>
+                    <xs:element name="display" type="xs:string"/>
+
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="matrix">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="name" type="xs:string"/>
+                  </xs:sequence>
+                  <xs:attribute name="producer" type="xs:string"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="LED" type="xs:string"/>
+              <xs:element name="name" type="xs:string"/>
+            </xs:sequence>
+            <xs:attribute name="producer" type="xs:string"/>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="boxSet">
+          <xs:complexType>
+            <xs:sequence>
+
+              <xs:element name="CPU">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="name" type="xs:string"/>
+                  </xs:sequence>
+                  <xs:attribute name="producer" type="xs:string"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="motherBoard" type="xs:string"/>
+              <xs:element name="RAM" type="xs:string"/>
+              <xs:element name="videoCard">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="name" type="xs:string"/>
+                  </xs:sequence>
+                  <xs:attribute name="producer" type="xs:string"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="coolingSystem" type="xs:string"/>
+              <xs:element name="soundCard" type="xs:string"/>
+              <xs:element name="powerSupply" type="xs:string"/>
+              <xs:element name="expansionCards" type="xs:string"/>
+              <xs:element name="HDD">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="name" type="xs:string"/>
+                  </xs:sequence>
+                  <xs:attribute name="producer" type="xs:string"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="removableМediaDevices">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="USBFlashDrive" type="xs:string"/>
+                    <xs:element name="opticalDisc" type="xs:string"/>
+                    <xs:element name="memoryCardReader" type="xs:string"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="box" type="xs:string"/>
+
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="peripherals">
+          <xs:complexType>
+            <xs:sequence>
+
+              <xs:element name="mouse">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="name" type="xs:string"/>
+                  </xs:sequence>
+                  <xs:attribute name="producer" type="xs:string"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="keyboard">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="name" type="xs:string"/>
+                  </xs:sequence>
+                  <xs:attribute name="producer" type="xs:string"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="otherDevices" type="xs:string"/>
+              <xs:element name="videoCamera" type="xs:string"/>
+              <xs:element name="microphone" type="xs:string"/>
+              <xs:element name="headPhones">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="name" type="xs:string"/>
+                  </xs:sequence>
+                  <xs:attribute name="producer" type="xs:string"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="additionalSoftware">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="OS">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="name" type="xs:string"/>
+                  </xs:sequence>
+                  <xs:attribute name="producer" type="xs:string"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="antiVirus">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="name" type="xs:string"/>
+                  </xs:sequence>
+                  <xs:attribute name="producer" type="xs:string"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="games">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="game1">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="name" type="xs:string"/>
+                        </xs:sequence>
+                        <xs:attribute name="producer" type="xs:string"/>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="game2">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="name" type="xs:string"/>
+                        </xs:sequence>
+                        <xs:attribute name="producer" type="xs:string"/>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="game3">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="name" type="xs:string"/>
+                        </xs:sequence>
+                        <xs:attribute name="producer" type="xs:string"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="other">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="name" type="xs:string"/>
+                  </xs:sequence>
+                  <xs:attribute name="producer" type="xs:string"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

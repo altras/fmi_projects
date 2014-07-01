@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<computerConfiguration xmlns="http://tempuri.org/XmlShema.xsd">
+  <monitor producer="Acer">
+    <aspectRatio>
+      <height>1024</height>
+      <width>768</width>
+    </aspectRatio>
+    <materials>
+      <stand>метал</stand>
+      <display>стъкло,кристали,метал</display>
+    </materials>
+    <matrix producer="Dell">
+      <name>AGI-TxD40 матрица</name>
+    </matrix>
+    <LED>няма</LED>
+    <name>няма</name>
+  </monitor>
+  <boxSet>
+    <CPU producer="Интел">
+      <name>Интел Core i7-3770K</name>
+    </CPU>
+    <motherBoard>Гигабайт G1.Sniper 3 Z77</motherBoard>
+    <RAM>4ГБ</RAM>
+    <videoCard producer="Nvidia">
+      <name>EVGA 015-P3-1480-KR GeForce GTX 480</name>
+    </videoCard>
+    <coolingSystem>GT-1850 вентилатор</coolingSystem>
+    <soundCard>АСУС Xonar Essence ST</soundCard>
+    <powerSupply>400W Seasonic X-400</powerSupply>
+    <expansionCards>TP-link TG-3468 лан карта</expansionCards>
+    <HDD producer="Уестърн Диджитал">
+      <name>WD Caviar Blue</name>
+    </HDD>
+    <removableМediaDevices>
+      <USBFlashDrive>Targus Desktop 7-Port USB 2.0 Hub</USBFlashDrive>
+      <opticalDisc>Самсунг 22X DVD записвачка</opticalDisc>
+      <memoryCardReader>СанДиск Всичко-в-едно USB 2.0 картов четец</memoryCardReader>
+    </removableМediaDevices>
+    <box>WishKT43</box>
+  </boxSet>
+  <peripherals>
+    <mouse producer="Рейзър">
+      <name>Император</name>
+    </mouse>
+    <keyboard producer="Рейзър">
+      <name>Черна Вдовица</name>
+    </keyboard>
+    <otherDevices>няма</otherDevices>
+    <videoCamera>няма</videoCamera>
+    <microphone>няма</microphone>
+    <headPhones producer="няма">
+      <name>няма</name>
+    </headPhones>
+  </peripherals>
+  <additionalSoftware>
+    <OS producer="Микрософт">
+      <name>Уиндоус 7</name>
+    </OS>
+    <antiVirus producer="няма">
+      <name>няма</name>
+    </antiVirus>
+    <games>
+      <game1 producer="Юбисофт">
+        <name>Рейман Ориджинс</name>
+      </game1>
+      <game2 producer="Близард">
+        <name>Стар Крафт 2</name>
+      </game2>
+      <game3 producer="ЕА">
+        <name>Ъндърковер</name>
+      </game3>
+    </games>
+    <other producer="няма">
+      <name>няма</name>
+    </other>
+  </additionalSoftware>
+</computerConfiguration>

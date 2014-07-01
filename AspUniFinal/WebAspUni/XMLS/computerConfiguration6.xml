@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<computerConfiguration xmlns="http://tempuri.org/XmlShema.xsd">
+  <monitor producer="producer1">
+    <aspectRatio>
+	  <height>1024</height>
+      <width>768</width>
+    </aspectRatio>
+    <materials>
+      <stand>метал,пластмаса</stand>
+      <display>стъкло,кристали,алуминий</display>
+    </materials>
+    <matrix producer="Acer">
+      <name>Active матрица</name>
+    </matrix>
+    <LED>да</LED>
+    <name>Филипс 236V3LSB LED</name>
+  </monitor>
+  <boxSet>
+    <CPU producer="Интел">
+      <name>Интел Core™2 Quad процесор</name>
+    </CPU>
+    <motherBoard>Интел Desktop Board DZ77GA-70K</motherBoard>
+    <RAM>16ГБ</RAM>
+    <videoCard producer="Nvidia">
+      <name>GeForce GTX 690</name>
+    </videoCard>
+    <coolingSystem>Сайлент Effizio Silent Thermistor Серия 120mm Вентилатор EFX-12-15T</coolingSystem>
+    <soundCard>Creative SB PCI128</soundCard>
+    <powerSupply>OCZ ZT SERIES 550W</powerSupply>
+    <expansionCards>TR-12467FX</expansionCards>
+    <HDD producer="Уестърн Диджитал">
+      <name>WD Caviar Green</name>
+    </HDD>
+    <removableМediaDevices>
+      <USBFlashDrive>DataTraveler SE15</USBFlashDrive>
+      <opticalDisc>ДВД/СД</opticalDisc>
+      <memoryCardReader>IOGEAR USB Smart Card Access Reader, Модел: GPFR256</memoryCardReader>
+    </removableМediaDevices>
+    <box>Lian Li V1200</box>
+  </boxSet>
+  <peripherals>
+    <mouse producer="Logitech">
+      <name>XQ5</name>
+    </mouse>
+    <keyboard producer="Logitech">
+      <name>ProX</name>
+    </keyboard>
+    <otherDevices>няма</otherDevices>
+    <videoCamera>стандартна</videoCamera>
+    <microphone>MC-5</microphone>
+    <headPhones producer="Рейзър">
+      <name>Razer Tiamat 7.1</name>
+    </headPhones>
+  </peripherals>
+  <additionalSoftware>
+    <OS producer="Микрософт">
+      <name>Уидоус 7</name>
+    </OS>
+    <antiVirus producer="Есет">
+      <name>Нод32 5</name>
+    </antiVirus>
+    <games>
+      <game1 producer="Близард">
+        <name>Рейман Ориджинс</name>
+      </game1>
+      <game2 producer="Близард">
+        <name>Стар Крафт 2</name>
+      </game2>
+      <game3 producer="ЕА">
+        <name>Ъндърковер</name>
+      </game3>
+    </games>
+    <other producer="няма">
+      <name>няма</name>
+    </other>
+  </additionalSoftware>
+</computerConfiguration>

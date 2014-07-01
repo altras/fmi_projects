@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<computerConfiguration xmlns="http://tempuri.org/XmlShema.xsd">
+  <monitor producer="producer1">
+    <aspectRatio>
+      <height>1024</height>
+      <width>768</width>
+    </aspectRatio>
+    <materials>
+      <stand>метал,пластмаса</stand>
+      <display>стъкло,кристали,метал,пластмаса</display>
+    </materials>
+    <matrix producer="HP">
+      <name>HP 2311gt</name>
+    </matrix>
+    <LED>няма</LED>
+    <name>няма</name>
+  </monitor>
+  <boxSet>
+    <CPU producer="Интел">
+      <name>Celeron b815</name>
+    </CPU>
+    <motherBoard>Интел Board DH67CL</motherBoard>
+    <RAM>8ГБ</RAM>
+    <videoCard producer="Nvidia">
+      <name>Geforce gt 630m</name>
+    </videoCard>
+    <coolingSystem>Noctua NH-D14 Вентилатор</coolingSystem>
+    <soundCard>АСУС Xonar Essence STX</soundCard>
+    <powerSupply>LZW-550</powerSupply>
+    <expansionCards>TP-link TG-3468 лан карта</expansionCards>
+    <HDD producer="Сийгейт">
+      <name>Seagate FreeAgent GoFlex Desk</name>
+    </HDD>
+    <removableМediaDevices>
+      <USBFlashDrive>DataTraveler SE15</USBFlashDrive>
+      <opticalDisc>ДВД/СД</opticalDisc>
+      <memoryCardReader>IOGEAR USB Smart Card Access Reader, Модел: GPFR256</memoryCardReader>
+    </removableМediaDevices>
+    <box>Lian Li V1200</box>
+  </boxSet>
+  <peripherals>
+    <mouse producer="HP">
+      <name>X7000 Wi-Fi Тъч Мишка</name>
+    </mouse>
+    <keyboard producer="Логитех">
+      <name>Логитех Уайърлес Клавиатура K750</name>
+    </keyboard>
+    <otherDevices>няма</otherDevices>
+    <videoCamera>6 LED 20 Мега пиксела</videoCamera>
+    <microphone>microphone1</microphone>
+    <headPhones producer="Рейзър">
+      <name>Razer Tiamat 7.1</name>
+    </headPhones>
+  </peripherals>
+  <additionalSoftware>
+    <OS producer="Микрософт">
+      <name>Уидоус 7</name>
+    </OS>
+    <antiVirus producer="Есет">
+      <name>Нод32 5</name>
+    </antiVirus>
+    <games>
+      <game1 producer="Близард">
+        <name>Рейман Ориджинс</name>
+      </game1>
+      <game2 producer="няма">
+        <name>няма</name>
+      </game2>
+      <game3 producer="няма">
+        <name>няма</name>
+      </game3>
+    </games>
+    <other producer="няма">
+      <name>няма</name>
+    </other>
+  </additionalSoftware>
+</computerConfiguration>

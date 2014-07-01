@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<computerConfiguration xmlns="http://tempuri.org/XmlShema.xsd">
+  <monitor producer="producer1">
+    <aspectRatio>
+      <height>4234</height>
+      <width>312</width>
+    </aspectRatio>
+    <materials>
+      <stand>метал,пластмаса</stand>
+      <display>стъкло,кристали,алуминий</display>
+    </materials>
+    <matrix producer="HP">
+      <name>HP 2311gt</name>
+    </matrix>
+    <LED>няма</LED>
+    <name>няма</name>
+  </monitor>
+  <boxSet>
+    <CPU producer="AMD">
+      <name>FX 4-Ядрен Черна Серия</name>
+    </CPU>
+    <motherBoard>Интел® Desktop Board D425KT</motherBoard>
+    <RAM>8ГБ</RAM>
+    <videoCard producer="ATI">
+      <name>X1900XTX</name>
+    </videoCard>
+    <coolingSystem>Lamptron 30W - 4 </coolingSystem>
+    <soundCard>Creative SB PCI128</soundCard>
+    <powerSupply>OCZ ZT SERIES 550W</powerSupply>
+    <expansionCards>DX-E102</expansionCards>
+    <HDD producer="Уестърн Диджитал">
+      <name>WD Caviar Blue</name>
+    </HDD>
+    <removableМediaDevices>
+      <USBFlashDrive>Targus Desktop 7-Port USB 2.0 Hub</USBFlashDrive>
+      <opticalDisc>Самсунг 22X DVD записвачка</opticalDisc>
+      <memoryCardReader>СанДиск Всичко-в-едно USB 2.0 картов четец</memoryCardReader>
+    </removableМediaDevices>
+    <box>WishKT43</box>
+  </boxSet>
+  <peripherals>
+    <mouse producer="Рейзър">
+      <name>Император</name>
+    </mouse>
+    <keyboard producer="Рейзър">
+      <name>Черна Вдовица</name>
+    </keyboard>
+    <otherDevices>няма</otherDevices>
+    <videoCamera>няма</videoCamera>
+    <microphone>няма</microphone>
+    <headPhones producer="Аудио-Техника">
+      <name>Audio-Technica ATH-M50 Closed Back Слушалки</name>
+    </headPhones>
+  </peripherals>
+  <additionalSoftware>
+    <OS producer="Микрософт">
+      <name>Уиндоус 7</name>
+    </OS>
+    <antiVirus producer="няма">
+      <name>няма</name>
+    </antiVirus>
+    <games>
+      <game1 producer="няма">
+        <name>няма</name>
+      </game1>
+      <game2 producer="няма">
+        <name>няма</name>
+      </game2>
+      <game3 producer="ЕА">
+        <name>Ъндърковер</name>
+      </game3>
+    </games>
+    <other producer="няма">
+      <name>няма</name>
+    </other>
+  </additionalSoftware>
+</computerConfiguration>

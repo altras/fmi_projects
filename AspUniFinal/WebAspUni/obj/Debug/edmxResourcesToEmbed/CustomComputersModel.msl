@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CustomComputersAspModelStoreContainer" CdmEntityContainer="CustomComputersAspEntities">
+    <EntitySetMapping Name="BoxSets">
+      <EntityTypeMapping TypeName="CustomComputersAspModel.BoxSet">
+        <MappingFragment StoreEntitySet="BoxSet">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="cupId" ColumnName="cupId" />
+          <ScalarProperty Name="motherboard" ColumnName="motherboard" />
+          <ScalarProperty Name="ram" ColumnName="ram" />
+          <ScalarProperty Name="videoCardId" ColumnName="videoCardId" />
+          <ScalarProperty Name="coolingSystem" ColumnName="coolingSystem" />
+          <ScalarProperty Name="powerSupply" ColumnName="powerSupply" />
+          <ScalarProperty Name="expansionCards" ColumnName="expansionCards" />
+          <ScalarProperty Name="hddId" ColumnName="hddId" />
+          <ScalarProperty Name="removableDevices" ColumnName="removableDevices" />
+          <ScalarProperty Name="box" ColumnName="box" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Configurations">
+      <EntityTypeMapping TypeName="CustomComputersAspModel.Configuration">
+        <MappingFragment StoreEntitySet="Configuration">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="boxId" ColumnName="boxId" />
+          <ScalarProperty Name="monitorId" ColumnName="monitorId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cpus">
+      <EntityTypeMapping TypeName="CustomComputersAspModel.Cpu">
+        <MappingFragment StoreEntitySet="Cpu">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="producer" ColumnName="producer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Hdds">
+      <EntityTypeMapping TypeName="CustomComputersAspModel.Hdd">
+        <MappingFragment StoreEntitySet="Hdd">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="producer" ColumnName="producer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Materials">
+      <EntityTypeMapping TypeName="CustomComputersAspModel.Material">
+        <MappingFragment StoreEntitySet="Materials">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="stand" ColumnName="stand" />
+          <ScalarProperty Name="display" ColumnName="display" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Monitors">
+      <EntityTypeMapping TypeName="CustomComputersAspModel.Monitor">
+        <MappingFragment StoreEntitySet="Monitor">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="materialsId" ColumnName="materialsId" />
+          <ScalarProperty Name="matrix" ColumnName="matrix" />
+          <ScalarProperty Name="aspectRatio" ColumnName="aspectRatio" />
+          <ScalarProperty Name="led" ColumnName="led" />
+          <ScalarProperty Name="producer" ColumnName="producer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Peripherals">
+      <EntityTypeMapping TypeName="CustomComputersAspModel.Peripheral">
+        <MappingFragment StoreEntitySet="Peripherals">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="producer" ColumnName="producer" />
+          <ScalarProperty Name="configId" ColumnName="configId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Softwares">
+      <EntityTypeMapping TypeName="CustomComputersAspModel.Software">
+        <MappingFragment StoreEntitySet="Software">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="producer" ColumnName="producer" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="configId" ColumnName="configId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VideoCards">
+      <EntityTypeMapping TypeName="CustomComputersAspModel.VideoCard">
+        <MappingFragment StoreEntitySet="VideoCard">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="producer" ColumnName="producer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

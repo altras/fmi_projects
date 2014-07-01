@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<computerConfiguration xmlns="http://tempuri.org/XmlShema.xsd">
+  <monitor producer="Sony">
+    <aspectRatio>
+      <height>1920</height>
+      <width>1200</width>
+    </aspectRatio>
+    <materials>
+      <stand>метал</stand>
+      <display>метал,алуминии</display>
+    </materials>
+    <matrix producer="HP">
+      <name>HP 2311gt</name>
+    </matrix>
+    <LED>няма</LED>
+    <name>няма</name>
+  </monitor>
+  <boxSet>
+    <CPU producer="Интел">
+      <name>Интел Core i7-3770K</name>
+    </CPU>
+    <motherBoard>Гигабайт G1.Sniper 3 Z77</motherBoard>
+    <RAM>4ГБ</RAM>
+    <videoCard producer="Nvidia">
+      <name>EVGA 015-P3-1480-KR GeForce GTX 480</name>
+    </videoCard>
+    <coolingSystem>GT-1850 вентилатор</coolingSystem>
+    <soundCard>АСУС Xonar Essence ST</soundCard>
+    <powerSupply>400W Seasonic X-400</powerSupply>
+    <expansionCards>TP-link TG-3468 лан карта</expansionCards>
+    <HDD producer="Сийгейт">
+      <name>Seagate FreeAgent GoFlex Desk</name>
+    </HDD>
+    <removableМediaDevices>
+      <USBFlashDrive>Targus Desktop 7-Port USB 2.0 Hub</USBFlashDrive>
+      <opticalDisc>Самсунг 22X DVD записвачка</opticalDisc>
+      <memoryCardReader>СанДиск Всичко-в-едно USB 2.0 картов четец</memoryCardReader>
+    </removableМediaDevices>
+    <box>WishKT43</box>
+  </boxSet>
+  <peripherals>
+    <mouse producer="Рейзър">
+      <name>Razer Naga</name>
+    </mouse>
+    <keyboard producer="СтийлСирийс">
+      <name>SteelSeries Merc Stealth</name>
+    </keyboard>
+    <otherDevices>няма</otherDevices>
+    <videoCamera>няма</videoCamera>
+    <microphone>няма</microphone>
+    <headPhones producer="Аудио-Техника">
+      <name>Audio-Technica ATH-M50 Closed Back Слушалки</name>
+    </headPhones>
+  </peripherals>
+  <additionalSoftware>
+    <OS producer="Микрософт">
+      <name>Уиндоус 7</name>
+    </OS>
+    <antiVirus producer="няма">
+      <name>няма</name>
+    </antiVirus>
+    <games>
+      <game1 producer="няма">
+        <name>няма</name>
+      </game1>
+      <game2 producer="няма">
+        <name>няма</name>
+      </game2>
+      <game3 producer="няма">
+        <name>няма</name>
+      </game3>
+    </games>
+    <other producer="няма">
+      <name>няма</name>
+    </other>
+  </additionalSoftware>
+</computerConfiguration>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<computerConfiguration xmlns="http://tempuri.org/XmlShema.xsd">
+  <monitor producer="Acer">
+    <aspectRatio>
+      <height>1280</height>
+      <width>768</width>
+    </aspectRatio>
+    <materials>
+      <stand>пластмаса</stand>
+      <display>стъкло,кристали,пластмаса</display>
+    </materials>
+    <matrix producer="Acer">
+      <name>LCD дисплей / TFT актив матрица</name>
+    </matrix>
+    <LED>няма</LED>
+    <name>няма</name>
+  </monitor>
+  <boxSet>
+    <CPU producer="АМД">
+      <name>AMD FX-8150 8-Ядрен </name>
+    </CPU>
+    <motherBoard>АСУС Максимум V Формула Z77</motherBoard>
+    <RAM>8ГБ</RAM>
+    <videoCard producer="Nvidia">
+      <name>GeForce GT 640</name>
+    </videoCard>
+    <coolingSystem>Noctua NF-S12B FLX 120mm вентилатор</coolingSystem>
+    <soundCard>Auzen X-Fi HD</soundCard>
+    <powerSupply>Nexus Value 430</powerSupply>
+    <expansionCards>Интел EXPI9301CTBLK</expansionCards>
+    <HDD producer="Уестърн Дигитал">
+      <name>Уестърн Дигитал Scorpio Blue 1TB</name>
+    </HDD>
+    <removableМediaDevices>
+      <USBFlashDrive>Belkin Plus 7-port USB 2.0 Hub</USBFlashDrive>
+      <opticalDisc>SH-222AB Internal DVD записвачка</opticalDisc>
+      <memoryCardReader>Silverstone FP37</memoryCardReader>
+    </removableМediaDevices>
+    <box>BoxBoxIn321</box>
+  </boxSet>
+  <peripherals>
+    <mouse producer="Рейзър">
+      <name>Naga</name>
+    </mouse>
+    <keyboard producer="Рейзър">
+      <name>Черна Вдовица</name>
+    </keyboard>
+    <otherDevices>няма</otherDevices>
+    <videoCamera>няма</videoCamera>
+    <microphone>няма</microphone>
+    <headPhones producer="Рейзър">
+      <name>Banshee</name>
+    </headPhones>
+  </peripherals>
+  <additionalSoftware>
+    <OS producer="Микрософт">
+      <name>Уиндоус7</name>
+    </OS>
+    <antiVirus producer="няма">
+      <name>няма</name>
+    </antiVirus>
+    <games>
+      <game1 producer="няма">
+        <name>няма</name>
+      </game1>
+      <game2 producer="няма">
+        <name>няма</name>
+      </game2>
+      <game3 producer="няма">
+        <name>няма</name>
+      </game3>
+    </games>
+    <other producer="няма">
+      <name>няма</name>
+    </other>
+  </additionalSoftware>
+</computerConfiguration>
